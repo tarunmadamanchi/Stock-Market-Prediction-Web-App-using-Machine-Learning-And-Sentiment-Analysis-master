@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SignUp and Login</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stylesign.css') }}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="container" id="container">
+<div class="form-container sign-up-container">
+
+<form action="">
+	<h1>Create Account</h1>
+	<input required="required" type="text" id= "name" name="name" placeholder="Name" >
+	<input required="required" type="email" id= "email" name="email" placeholder="Email" >
+	<input required="required" type="password" id= "password" name="password" placeholder="Password" >
+	<button type="button" id="register" name="register">SignUp</button>
+</form>
+</div>
+<div class="form-container sign-in-container">
+	<form action="">
+		<h1>Sign In</h1>
+	<input required="required" type="email" id= "emai" name="emai" placeholder="Email" >
+	<input required="required" type="password" id= "passwor" name="passwor" placeholder="Password" >
+	<button type="button" id="login" name="login">Sign In</button>
+		<button style="margin:5px" type="button" id="fp" name="fp">Forgot Password</button>
+	</form>
+</div>
+<div class="overlay-container">
+	<div class="overlay">
+		<div class="overlay-panel overlay-left">
+			<h1>Welcome Back!</h1>
+			<p>To keep connected with us please login with your personal info</p>
+			<button class="ghost" id="signIn">Sign In</button>
+		</div>
+		<div class="overlay-panel overlay-right">
+			<h1>Hello, Friend!</h1>
+			<p>Enter your details and start journey with us</p>
+			<button class="ghost" id="signUp">Sign Up</button>
+		</div>
+	</div>
+</div>
+</div>
+
+<script type="text/javascript">
+	const signUpButton = document.getElementById('signUp');
+	const signInButton = document.getElementById('signIn');
+	const container = document.getElementById('container');
+
+	signUpButton.addEventListener('click', () => {
+		container.classList.add("right-panel-active");
+	});
+	signInButton.addEventListener('click', () => {
+		container.classList.remove("right-panel-active");
+	});
+</script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+  apiKey: "AIzaSyCuSfeGyFhbkAy2kLLIYgWVGnYsYaZc5xw",
+  authDomain: "authe-94e5a.firebaseapp.com",
+  projectId: "authe-94e5a",
+  storageBucket: "authe-94e5a.appspot.com",
+  messagingSenderId: "110929725961",
+  appId: "1:110929725961:web:aefac1e35ae544e4b206d8"
+};
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+      </script>
+
+
+
+        <script type="module">
+            import { getAuth, updateProfile , createUserWithEmailAndPassword ,sendEmailVerification  } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js";
+    
+        const auth = getAuth();
+        const register = async () => {
+            const email = document.querySelector("#email").value;
+            const password = document.querySelector("#password").value;
+            const uname = document.querySelector("#name").value;
+
+            if (email.trim() == "") {
+                alert("Enter Email");
+            } else if (password.trim().length < 7) {
+                alert("Password must be at least 7 characters");
+
+            } else {
+            createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    
+    const user = userCredential.user;
+    sendEmailVerification(user)
+      .then(() => {
+        alert("email verification sent");
+      });
+    
+    
+    alert("Account Created")
+    window.location.href = "http://127.0.0.1:5000/verifypl";
+
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    alert(errorMessage);
+    
+  });
+            
+                
+            }
+        }
+
+
+
+        document.querySelector("#register").addEventListener("click", () => {
+            register();
+        });
+
+    </script>
+
+        <script type="module">
+            import { getAuth, signInWithEmailAndPassword,sendPasswordResetEmail , updateProfile, createUserWithEmailAndPassword, sendEmailVerification } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js";
+
+                const auth = getAuth();
+        const login = () => {
+            const email = document.querySelector("#emai").value;
+            const password = document.querySelector("#passwor").value;
+        if (email.trim()=="")
+            {
+                alert("enter email")
+                
+            }
+        if (password.trim()=="")
+            {
+                alert("enter password")
+            }
+
+                signInWithEmailAndPassword(auth, email, password)
+                    .then((userCredential) => {
+                        // Signed in 
+                        const user = userCredential.user;
+                        window.location.href = "http://127.0.0.1:5000/home";
+                        return false;
+
+                        alert('User loged in!');
+                        // ...
+                    })
+                    .catch((error) => {
+                        const errorCode = error.code;
+                        const errorMessage = error.message;
+
+                        alert(errorMessage);
+                    });
+
+
+        }
+        const fpass = () => {
+          const email = document.querySelector("#emai").value;
+
+    if (email.trim() == "") {
+                alert("Enter Email");
+            }
+            else{
+
+const auth = getAuth();
+sendPasswordResetEmail(auth, email)
+  .then(() => {
+      alert("Reset mail sent");
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+  });
+     }
+      }
+      document.querySelector("#fp").addEventListener("click", () => {
+            fpass();
+        });
+        document.querySelector("#login").addEventListener("click", () => {
+            login();
+        });
+
+        </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
