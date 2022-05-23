@@ -34,12 +34,13 @@
 
     // Your web app's Firebase configuration
     const firebaseConfig = {
-        apiKey: "AIzaSyCuSfeGyFhbkAy2kLLIYgWVGnYsYaZc5xw",
-        authDomain: "authe-94e5a.firebaseapp.com",
-        projectId: "authe-94e5a",
-        storageBucket: "authe-94e5a.appspot.com",
-        messagingSenderId: "110929725961",
-        appId: "1:110929725961:web:aefac1e35ae544e4b206d8"
+  apiKey: "AIzaSyCgOvztm8QAS474CTPdUrRBFcjz5hQCRLY",
+  authDomain: "login-202e9.firebaseapp.com",
+  projectId: "login-202e9",
+  storageBucket: "login-202e9.appspot.com",
+  messagingSenderId: "1096469003",
+  appId: "1:1096469003:web:6e85760fdc307606f7d50e",
+  measurementId: "G-NR2W4MXP77"
     };
 
     // Initialize Firebase
@@ -123,7 +124,7 @@ onAuthStateChanged(auth, (user) => {
                         <li class="nav-devider"></li>
                         <br>
                         <li class="nav-label"><a href="{{ url_for('home') }}">HOME</a></li>
-                        <li class="nav-label"><a href="{{ url_for('index') }}">DASHBOARD</a></li>
+                        <li class="nav-label"><a href="{{ url_for('dashboard') }}">DASHBOARD</a></li>
                         <li class="nav-label"><a href="{{ url_for('index') }}">PREDICT THE FUTURE</a></li>
                         <li class="nav-label"><a href="{{ url_for('about_us') }}">ABOUT US</a>
                         <li class="nav-label"><a href="{{ url_for('contact_us') }}">CONTACT US</a>
@@ -164,7 +165,10 @@ onAuthStateChanged(auth, (user) => {
                                     <span><i class="ti-bag f-s-40"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
+                                    {% for i in final_currency %}
                                     <h2 class="color-white text-white">{{open_s}}</h2>
+                                    <p class="m-b-0 text-white">{{ i }}</p>
+                                    {% endfor %}
                                     <p class="m-b-0 text-white">OPEN</p>
                                 </div>
                             </div>
@@ -178,7 +182,10 @@ onAuthStateChanged(auth, (user) => {
                                     <span><i class="ti-comment f-s-40"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
+                                    {% for i in final_currency %}
                                     <h2 class="color-white text-white">{{high_s}}</h2>
+                                    <p class="m-b-0 text-white">{{ i }}</p>
+                                    {% endfor %}
                                     <p class="m-b-0 text-white">HIGH</p>
                                 </div>
                             </div>
@@ -191,7 +198,10 @@ onAuthStateChanged(auth, (user) => {
                                     <span><i class="ti-vector f-s-40"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
+                                    {% for i in final_currency %}
                                     <h2 class="color-white text-white">{{low_s}}</h2>
+                                    <p class="m-b-0 text-white">{{ i }}</p>
+                                    {% endfor %}
                                     <p class="m-b-0 text-white">LOW</p>
                                 </div>
                             </div>
@@ -204,7 +214,10 @@ onAuthStateChanged(auth, (user) => {
                                     <span><i class="ti-location-pin f-s-40"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
+                                    {% for i in final_currency %}
                                     <h2 class="color-white text-white">{{close_s}}</h2>
+                                    <p class="m-b-0 text-white">{{ i }}</p>
+                                    {% endfor %}
                                     <p class="m-b-0 text-white">CLOSE</p>
                                 </div>
                             </div>
@@ -217,7 +230,10 @@ onAuthStateChanged(auth, (user) => {
                                     <span><i class="ti-comment f-s-40"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
+                                    {% for i in final_currency %}
                                     <h2 class="color-white text-white">{{adj_close}}</h2>
+                                    <p class="m-b-0 text-white">{{ i }}</p>
+                                    {% endfor %}
                                     <p class="m-b-0 text-white">ADJ CLOSE</p>
                                 </div>
                             </div>
@@ -448,8 +464,8 @@ onAuthStateChanged(auth, (user) => {
                                                         <a href="https://finance.yahoo.com/quote/{{quote}}"><img style="padding: 0px,0px,0px,0px;width:120px;height: 120px;" src="{{url_for('static', filename='fore.png')}}" alt=""></a>
                                                     </div>
                                                 </td>
-                                                <td>{% for row in forecast_set %}
-                                          {{row[0]}}<br>
+                                                <td>{% for row in range(forecast_set|length) %}
+                                          {{dates[row]}}&emsp;{{forecast_set[row]}}<br>
                                           {% endfor %}</td>
                                                 <td><span></span></td>
                                                 <td><span></span></td>
@@ -546,7 +562,7 @@ onAuthStateChanged(auth, (user) => {
         <div class="information">
           <ul>
             <li><a href="{{ url_for('home') }}"> <i class="fa fa-arrow-right"></i> HOME</a></li>
-            <li><a href="{{ url_for('index') }}"> <i class="fa fa-arrow-right"></i> DASHBOARD</a></li>
+            <li><a href="{{ url_for('dashboard') }}"> <i class="fa fa-arrow-right"></i> DASHBOARD</a></li>
               <li><a href="{{ url_for('index') }}"> <i class="fa fa-arrow-right"></i> PREDICT THE FUTURE</a></li>
             <li><a href="{{ url_for('about_us') }}"> <i class="fa fa-arrow-right"></i> ABOUT</a></li>
             <!-- <li><a href="http://localhost/www/wordpress-5.6.2/wordpress/currency-converter/"> <i class="fa fa-arrow-right"></i> CURRENCY CONVERTER</a></li> -->

@@ -32,14 +32,7 @@
 
 <!-- Animate.min -->
 <link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='animate.min.css') }}">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
-
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='css/style.css') }}">
- <script type="module">
+     <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
     // TODO: Add SDKs for Firebase products that you want to use
@@ -95,7 +88,43 @@ onAuthStateChanged(auth, (user) => {
   }
 
 });
+
+
 </script>
+    <script>
+    var subjectObject = {
+  "Stock": ["Ticker","Name","Exchange","Category Name","Country"],
+  "Crypto": ["Ticker","Name"]
+}
+window.onload = function() {
+  var subjectSel = document.getElementById("subject");
+  var topicSel = document.getElementById("topic");
+//   var chapterSel = document.getElementById("chapter");
+  for (var x in subjectObject) {
+    subjectSel.options[subjectSel.options.length] = new Option(x, x);
+  }
+//   subjectSel.onchange = function() {
+//     //empty Chapters- and Topics- dropdowns
+//     chapterSel.length = 1;
+//     topicSel.length = 1;
+//     //display correct values
+//     for (var y in subjectObject[this.value]) {
+//       topicSel.options[topicSel.options.length] = new Option(y, y);
+//     }
+//   }
+  subjectSel.onchange = function() {
+    //empty Chapters dropdown
+    topicSel.length = 1;
+    //display correct values
+    var z = subjectObject[subjectSel.value];
+    console.log(z)
+    for (var i = 0; i < z.length; i++) {
+      topicSel.options[topicSel.options.length] = new Option(z[i], z[i]);
+    }
+  }
+}
+</script>
+
 </head>
 
 <body>
@@ -106,6 +135,7 @@ onAuthStateChanged(auth, (user) => {
 
 <!-- Nav Bar-->
 
+
 <nav class="navbar-fixed-top transparrent-bg">
   <div class="container">
     <div id="menuzord" class="menuzord red"> <a href="{{ url_for('home') }}" class="menuzord-brand"><img src="{{url_for('static', filename='logo-2.png')}}" />
@@ -115,10 +145,8 @@ onAuthStateChanged(auth, (user) => {
         <li class="active"><a href="{{ url_for('home') }}">HOME</a>
         </li>
         <li><a href="{{ url_for('dashboard') }}">DASHBOARD</a>
-
         </li>
-		  <li><a href="{{ url_for('index') }}">Predict The Future</a>
-
+          <li><a href="{{ url_for('index') }}">Predict The Future</a>
         </li>
         <li><a href="{{ url_for('about_us') }}">ABOUT US</a>
 
@@ -127,9 +155,10 @@ onAuthStateChanged(auth, (user) => {
         <!-- <li><a href="http://localhost/www/wordpress-5.6.2/wordpress/currency-converter/">CURRENCY CONVERTER</a>
 
         </li> -->
-<li><a href="{{ url_for('contact_us') }}">CONTACT US</a>
+        <li><a href="{{ url_for('contact_us') }}">CONTACT US</a>
+
         </li>
-   <li><a href="{{ url_for('signlog') }}" id="register_s">SIGN OUT</a>
+           <li><a href="{{ url_for('signlog') }}" id="register_s">SIGN OUT</a>
         </li>
       </ul>
 
@@ -145,7 +174,7 @@ onAuthStateChanged(auth, (user) => {
     <div class="container">
       <div style="padding-top: 40px" class="row">
         <div class="lead col-lg-12 col-xm-12 text-center">
-          <h1><span class="top-heading-inner"></span> </h1>
+          <h1><span class="top-heading-inner">SEARCH FOR TICKER</span> </h1>
           <div class="list-o-i white">
             <p class="white no-p"></p>
             <div class="pagenation_links"><a href="index.html" class="yellow"><br></a><i> </i></div>
@@ -156,119 +185,88 @@ onAuthStateChanged(auth, (user) => {
   </div>
 </div>
 <!-- ENd Header -->
-
-	<section class="ftco-section">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">Contact Form #01</h2>
-				</div>
-			</div>
-			<div class="row justify-content-center">
-				<div class="col-lg-10 col-md-12">
-					<div class="wrapper">
-						<div class="row no-gutters">
-							<div class="col-md-7 d-flex align-items-stretch">
-								<div class="contact-wrap w-100 p-md-5 p-4">
-									<h3 class="mb-4">Get in touch</h3>
-									<div id="form-message-warning" class="mb-4"></div>
-				      		<div id="form-message-success" class="mb-4">
-				            Your message was sent, thank you!
-				      		</div>
-									<form method="POST" action="{{ url_for('contact_us_mail_sending') }}" id="contactForm" name="contactForm">
-										<div class="row">
-											<div class="col-md-6">
-												<div class="form-group">
-													<input type="text" class="form-control" name="name" id="name" placeholder="Name">
-												</div>
-											</div>
-											<div class="col-md-6">
-												<div class="form-group">
-													<input type="email" class="form-control" name="email" id="email" placeholder="Email">
-												</div>
-											</div>
-											<div class="col-md-12">
-												<div class="form-group">
-													<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
-												</div>
-											</div>
-											<div class="col-md-12">
-												<div class="form-group">
-													<textarea name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Message"></textarea>
-												</div>
-											</div>
-											{{status}}
-											<div class="col-md-12">
-												<div class="form-group">
-													<input type="submit" value="Send Message" class="btn btn-primary">
-													<div class="submitting"></div>
-												</div>
-											</div>
-										</div>
-									</form>
-								</div>
-							</div>
-							<div class="col-md-5 d-flex align-items-stretch">
-								<div class="info-wrap bg-primary w-100 p-lg-5 p-4">
-									<h3 class="mb-4 mt-md-4">Contact us</h3>
-				        	<div class="dbox w-100 d-flex align-items-start">
-				        		<div class="icon d-flex align-items-center justify-content-center">
-				        			<span class="fa fa-map-marker"></span>
-				        		</div>
-				        		<div class="text pl-3">
-									<p><span>Address:</span> <a href='#'>"Jnana Gangotri" Campus, Hospet Rd, near Allipura, Ballari, 583104</a></p>
-					          </div>
-				          </div>
-				        	<div class="dbox w-100 d-flex align-items-center">
-				        		<div class="icon d-flex align-items-center justify-content-center">
-				        			<span class="fa fa-phone"></span>
-				        		</div>
-				        		<div class="text pl-3">
-					            <p><span>Phone:</span> <a href="tel://+919581388594">+91 95 81388594</a></p>
-					          </div>
-				          </div>
-				        	<div class="dbox w-100 d-flex align-items-center">
-				        		<div class="icon d-flex align-items-center justify-content-center">
-				        			<span class="fa fa-paper-plane"></span>
-				        		</div>
-				        		<div class="text pl-3">
-					            <p><span>Email:</span> <a href="tarunmadamanchi@gmail.com">tarunmadamanchi@gmail.com</a></p>
-					          </div>
-				          </div>
-				        	<div class="dbox w-100 d-flex align-items-center">
-				        		<div class="icon d-flex align-items-center justify-content-center">
-				        			<span class="fa fa-globe"></span>
-				        		</div>
-				        		<div class="text pl-3">
-					            <p><span>Website</span> <a href="#">StockForecaster.com</a></p>
-					          </div>
-				          </div>
-			          </div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+<div class="main-area top-download text-center ">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <p class="top-btn-text"> </p>
+      </div>
+      <div class="col-md-4 btn-ma"> </div>
+    </div>
+  </div>
+</div>
 
 
+<!-- Login  -->
+
+<div class="login_page login_solid_bg">
+  <div class="container">
+    <div class="log_in_box">
+      <form class="login" action = "{{ url_for('dashboard') }}" method = "GET">
+        <div class="login_title">
+          <h2>SEARCH FOR DETAILS</h2>{% if not_found %}
+          <div class="alert alert-danger" style="color: red;" role="alert">
+  Stock Symbol (Ticker) Not Found. Please Enter a Valid Stock Symbol
+</div>
+          {% endif %}
+        </div>
+        <div class="form-group">
+            <select name="subject" id="subject">
+                <option value="" selected="selected">Select field</option>
+              </select>
+                Choose: <select name="topic" id="topic">
+                <option value="" selected="selected">Select known field</option>
+              </select>
+
+          <input type="text" class="form-control" name = "symbol" placeholder="Company Stock Symbol">
+
+        </div>
+        <div class="form-group">
+
+        </div>
+        <div class="form-group">
+          <button class="btn btn-login" >SEARCH FOR DETAILS</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
 <!-- End Lgin  -->
+<!--<div class="search_results">-->
+<!--{% for table in tables %}-->
+<!--            {{titles[loop.index]}}-->
+<!--            {{ table|safe }}-->
+<!--{% endfor %}</div>-->
+<div >
+ <table style="border:1px solid black;margin-left:auto;margin-right:auto;" >
+        <thead >
 
-<!-- Demo Heading -->
+          <tr style="border:1px solid black;margin-left:auto;margin-right:auto;" >
+            {% for col in column_names %}
+            <th style="text-align:center;">
 
-<!--<div class="main-area top-download text-center ">-->
-<!--  <div class="container">-->
-<!--    <div class="row">-->
-<!--      <div class="col-md-8">-->
-<!--        <p class="top-btn-text"> </p>-->
-<!--      </div>-->
-<!--      <div class="col-md-4 btn-ma"> </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-<!-- End Lgin  -->
+              {{col}}
 
+            </th>
+            {% endfor %}
+          </tr>
+
+        </thead>
+        <tbody >
+          {% for row in row_data %}
+          <tr >
+            {% for col, row_ in zip(column_names, row) %}
+            <td >{{row_}}</td>
+            {% endfor %}
+          </tr>
+          {% endfor %}
+
+
+        </tbody>
+
+      </table>
+    </div>
 <!-- Demo Heading -->
 
 <div class="main-area top-download text-center ">
@@ -289,9 +287,8 @@ onAuthStateChanged(auth, (user) => {
 <div class="footer-section-area padding-top-bottom">
   <div class="container">
     <div class="row">
-      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><img  src="{{url_for('static', filename='logo-2.png')}}"><a></a>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><img  src="{{url_for('static', filename='logo-2.png')}}"></a>
         <p class="white">Stock Forecaster was started with a common goal of serving the finance community by our predictions in stocks whether to buy or sell or hold the stocks. All our team members bring to table their unique expertise and experience of stock market which they would like to pass on to future investors.</p>
-
       </div>
       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
         <div class="title">
@@ -300,7 +297,7 @@ onAuthStateChanged(auth, (user) => {
         <div class="popular-post">
          <ul>
           <li><a href="#"> <i class="fa fa-map-marker fa-2x"></i>
-"Jnana Gangotri" Campus, Hospet Rd, near Allipura, Ballari, Karnataka, India, Pin:- 583104 </a></li>
+"Jnana Gangotri" Campus, Hospet Rd, near Allipura, Ballari, Karnataka, India, Pin:- 583104</a></li>
           <li><a href="#"><i class="fa fa-envelope-o fa-2x"></i>tarunmadamanchi@gmail.com</a></li>
           <li><a href="#"><i class="fa fa-phone fa-2x"></i>+91 95 81388594</a></li>
         </ul>
@@ -315,7 +312,7 @@ onAuthStateChanged(auth, (user) => {
         </div>
         <div class="information">
           <ul>
-                 <li><a href="{{ url_for('home') }}"> <i class="fa fa-arrow-right"></i> HOME</a></li>
+            <li><a href="{{ url_for('home') }}"> <i class="fa fa-arrow-right"></i> HOME</a></li>
             <li><a href="{{ url_for('dashboard') }}"> <i class="fa fa-arrow-right"></i> DASHBOARD</a></li>
               <li><a href="{{ url_for('index') }}"> <i class="fa fa-arrow-right"></i> PREDICT THE FUTURE</a></li>
             <li><a href="{{ url_for('about_us') }}"> <i class="fa fa-arrow-right"></i> ABOUT</a></li>
@@ -341,17 +338,93 @@ onAuthStateChanged(auth, (user) => {
 
 <!-- Copyright Start  -->
 
-
+<!--<div class="copy-right-area">-->
+<!--  <div class="container">-->
+<!--    <div class="row">-->
+<!--      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">-->
+<!--        <div class="copy-right">-->
+<!--          <p></p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">-->
+<!--        <div class="social-media">-->
+<!--          <ul>-->
+<!--            <li><a href="index2.html#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>-->
+<!--            <li><a href="index2.html#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>-->
+<!--            <li><a href="index2.html#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>-->
+<!--            <li><a href="index2.html#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>-->
+<!--            <li><a href="index2.html#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>-->
+<!--            <li><a href="index2.html#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
 
 <!-- End Copyright -->
 
 <!--Contact Popup-->
 
+<!--<div class="modal fade pop-box" id="donate-popup" tabindex="-1" role="dialog" aria-labelledby="donate-popup" aria-hidden="true">-->
+<!--  <div class="modal-dialog">-->
+<!--    <div class="modal-content"> -->
+<!--      &lt;!&ndash;Donation div&ndash;&gt;-->
+<!--      <div class="donation-div">-->
+<!--        <div class="donation-plz">-->
+<!--          <form method="post" action="contact.html">-->
+<!--            -->
+<!--            &lt;!&ndash;Form Portlet&ndash;&gt; -->
+<!--            -->
+<!--            &lt;!&ndash;Form Portlet&ndash;&gt;-->
+<!--            <div class="form-portlet">-->
+<!--              <h4>Consultaion Information</h4>-->
+<!--              <div class="row clearfix">-->
+<!--                <div class="form-group col-lg-6 col-md-6 col-xs-12">-->
+<!--                  <div class="field-label">First Name <span class="required">*</span></div>-->
+<!--                  <input type="text" name="name" value="" placeholder="First Name" required>-->
+<!--                </div>-->
+<!--                <div class="form-group col-lg-6 col-md-6 col-xs-12">-->
+<!--                  <div class="field-label">Last Name <span class="required">*</span></div>-->
+<!--                  <input type="text" name="name" value="" placeholder="Last Name" required>-->
+<!--                </div>-->
+<!--                <div class="form-group col-lg-6 col-md-6 col-xs-12">-->
+<!--                  <div class="field-label">Email <span class="required">*</span></div>-->
+<!--                  <input type="email" name="name" value="" placeholder="Email" required>-->
+<!--                </div>-->
+<!--                <div class="form-group col-lg-6 col-md-6 col-xs-12">-->
+<!--                  <div class="field-label">Phone <span class="required">*</span></div>-->
+<!--                  <input type="text" name="name" value="" placeholder="Phone" required>-->
+<!--                </div>-->
+<!--                <div class="form-group col-lg-6 col-md-6 col-xs-12">-->
+<!--                  <div class="field-label">Address 1 <span class="required">*</span></div>-->
+<!--                  <input type="text" name="name" value="" placeholder="Address 1" required>-->
+<!--                </div>-->
+<!--                <div class="form-group col-lg-6 col-md-6 col-xs-12">-->
+<!--                  <div class="field-label">Address 2 <span class="required">*</span></div>-->
+<!--                  <input type="text" name="name" value="" placeholder="Address 2" required>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <br>-->
+<!--            -->
+<!--            &lt;!&ndash;Form Portlet&ndash;&gt;-->
+<!--            -->
+<!--            <div class="text-left">-->
+<!--              <button type="submit" class="theme-btn btn-style-two">Send Now</button>-->
+<!--            </div>-->
+<!--          </form>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    &lt;!&ndash; /.modal-content &ndash;&gt; -->
+<!--  </div>-->
+<!--  &lt;!&ndash; /.modal-dialog &ndash;&gt; -->
+<!--</div>-->
 
+<!--&lt;!&ndash; END Donate Popup&ndash;&gt; -->
 
-<!-- END Donate Popup-->
-
-<!-- Back to Top -->
+<!--&lt;!&ndash; Back to Top &ndash;&gt; -->
 <a href="#" id="back-to-top" title="Back to top"><img src="{{url_for('static', filename='top-arrow.png')}}"></a>
 
 <!-- js file  -->
@@ -365,14 +438,6 @@ onAuthStateChanged(auth, (user) => {
 
 <!-- main js -->
 <script type="text/javascript" src="{{url_for('static', filename='main.js')}}"></script>
-
-
-<script type="text/javascript" src="{{url_for('static', filename='jquery.min_1.js')}}"></script>
-<script type="text/javascript" src="{{url_for('static', filename='popper.js_1')}}"></script>
-<script type="text/javascript" src="{{url_for('static', filename='bootstrap.min_1.js')}}"></script>
-<script type="text/javascript" src="{{url_for('static', filename='jquery.validate.min_1.js')}}"></script>
-<!--<script type="text/javascript" src="{{url_for('static', filename='main_1.js')}}"></script>-->
-
 <script type="module">
 import { getAuth, signOut, updateProfile , createUserWithEmailAndPassword ,sendEmailVerification  } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js";
 
