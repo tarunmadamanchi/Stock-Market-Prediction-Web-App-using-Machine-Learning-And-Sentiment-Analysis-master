@@ -1,0 +1,1075 @@
+2022-05-11 11:56:13,018 - Fast API - INFO  - handlers.py - handlers: get_historical: 108 - TCS.NS
+2022-05-11 11:56:14,011 - Fast API - INFO  - handlers.py - handlers: get_historical: 111 -                    High          Low  ...     Volume    Adj Close
+Date                                  ...                        
+2020-05-11  1951.400024  1909.000000  ...  2449841.0  1893.067749
+2020-05-12  1956.500000  1910.250000  ...  3256595.0  1906.957886
+2020-05-13  1994.000000  1925.650024  ...  2656665.0  1907.104370
+2020-05-14  1923.099976  1891.099976  ...  2263146.0  1860.836670
+2020-05-15  1917.400024  1865.199951  ...  3173682.0  1851.593018
+...                 ...          ...  ...        ...          ...
+2022-05-05  3533.000000  3485.350098  ...  1612262.0  3513.399902
+2022-05-06  3474.500000  3424.500000  ...  2010812.0  3432.600098
+2022-05-09  3456.000000  3346.850098  ...  2481830.0  3445.100098
+2022-05-10  3464.800049  3422.000000  ...  1622685.0  3438.750000
+2022-05-11  3448.449951  3395.350098  ...   657663.0  3417.250000
+
+[500 rows x 6 columns]
+2022-05-11 11:56:14,111 - Fast API - INFO  - main.py - main: insertintostock: 111 - ##############################################################################
+2022-05-11 11:56:14,111 - Fast API - INFO  - main.py - main: insertintostock: 112 - Today'sTCS.NSStock Data: 
+2022-05-11 11:56:14,111 - Fast API - INFO  - main.py - main: insertintostock: 114 -            Date         High          Low    Open    Close    Volume  Adj Close
+499  2022-05-11  3448.449951  3395.350098  3435.0  3417.25  657663.0    3417.25
+2022-05-11 11:56:14,156 - Fast API - INFO  - main.py - main: insertintostock: 115 - ##############################################################################
+2022-05-11 11:56:53,999 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 180 - ##############################################################################
+2022-05-11 11:56:53,999 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 182 - Tomorrow's TCS.NS  Closing Price Prediction by ARIMA:3449.575864036043
+2022-05-11 11:56:54,000 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 185 - ARIMA RMSE:52.88221137071082
+2022-05-11 11:56:54,000 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 186 - ##############################################################################
+2022-05-11 11:57:18,244 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 312 - ##############################################################################
+2022-05-11 11:57:18,244 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 313 - Tomorrow's TCS.NS Closing Price Prediction by LSTM: 3534.78466796875
+2022-05-11 11:57:18,244 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 314 - LSTM RMSE:100.50915980341662
+2022-05-11 11:57:18,245 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 315 - ##############################################################################
+2022-05-11 11:57:18,416 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 374 - ##############################################################################
+2022-05-11 11:57:18,416 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 375 - Tomorrow's TCS.NS Closing Price Prediction by Linear Regression: 3689.6689076665825
+2022-05-11 11:57:18,417 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 376 - Linear Regression RMSE:207.48114215288498
+2022-05-11 11:57:18,417 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 377 - ##############################################################################
+2022-05-11 11:57:19,710 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 443 - ##############################################################################
+2022-05-11 11:57:19,710 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 444 - Positive Tweets :4Negative Tweets :1Neutral Tweets :295
+2022-05-11 11:57:19,710 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 445 - ##############################################################################
+2022-05-11 11:57:19,759 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 459 - ##############################################################################
+2022-05-11 11:57:19,759 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 460 - Tweets Polarity: Overall Positive
+2022-05-11 11:57:19,759 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 461 - ##############################################################################
+2022-05-11 11:57:19,765 - Fast API - INFO  - handlers.py - handlers: recommending: 567 - ##############################################################################
+2022-05-11 11:57:19,765 - Fast API - INFO  - handlers.py - handlers: recommending: 568 - According to the ML Predictions and Sentiment Analysis of Tweets, aRISEinTCS.NSstock is expected => BUY
+2022-05-11 11:57:19,765 - Fast API - INFO  - main.py - main: insertintostock: 130 - Forecasted Prices for Next 7 days:
+2022-05-11 11:57:19,765 - Fast API - INFO  - main.py - main: insertintostock: 131 - [[3689.66890767]
+ [3627.14173683]
+ [3660.72571883]
+ [3580.08420141]
+ [3592.55971384]
+ [3586.22205606]
+ [3564.76417468]]
+2022-05-11 12:52:28,319 - Fast API - INFO  - handlers.py - handlers: get_historical: 101 - TCS.NS
+2022-05-11 12:52:29,404 - Fast API - INFO  - handlers.py - handlers: get_historical: 104 -                    High          Low  ...     Volume    Adj Close
+Date                                  ...                        
+2002-08-12    40.000000    38.724998  ...   212976.0    29.410921
+2002-08-13    40.387501    38.875000  ...   153576.0    29.012732
+2002-08-14    39.250000    35.724998  ...   822776.0    27.012482
+2002-08-15    36.462502    36.462502  ...        0.0    27.012482
+2002-08-16    38.000000    35.750000  ...   811856.0    26.947662
+...                 ...          ...  ...        ...          ...
+2022-05-05  3533.000000  3485.350098  ...  1612262.0  3513.399902
+2022-05-06  3474.500000  3424.500000  ...  2010812.0  3432.600098
+2022-05-09  3456.000000  3346.850098  ...  2481830.0  3445.100098
+2022-05-10  3464.800049  3422.000000  ...  1622685.0  3438.750000
+2022-05-11  3448.449951  3395.350098  ...   919249.0  3416.000000
+
+[4905 rows x 6 columns]
+2022-05-11 12:52:29,580 - Fast API - INFO  - main.py - main: insertintostock: 86 - ##############################################################################
+2022-05-11 12:52:29,580 - Fast API - INFO  - main.py - main: insertintostock: 87 - Today'sTCS.NSStock Data: 
+2022-05-11 12:52:29,580 - Fast API - INFO  - main.py - main: insertintostock: 89 -             Date         High          Low    Open   Close    Volume  Adj Close
+4904  2022-05-11  3448.449951  3395.350098  3435.0  3416.0  919249.0     3416.0
+2022-05-11 12:52:29,598 - Fast API - INFO  - main.py - main: insertintostock: 90 - ##############################################################################
+2022-05-11 13:09:45,614 - Fast API - ERROR  - handlers.py - handlers: contact_us_mail_sending: 92 - exception raisedWorking outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2022-05-11 13:16:49,329 - Fast API - ERROR  - handlers.py - handlers: contact_us_mail_sending: 92 - exception raisedWorking outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2022-05-11 13:18:51,306 - Fast API - ERROR  - handlers.py - handlers: contact_us_mail_sending: 92 - exception raisedWorking outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2022-05-11 13:20:08,335 - Fast API - ERROR  - handlers.py - handlers: contact_us_mail_sending: 93 - exception raisedWorking outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request.  Consult the documentation on testing for
+information about how to avoid this problem.
+2022-05-11 13:21:27,548 - Fast API - INFO  - handlers.py - handlers: contact_us_mail_sending: 90 - name :Tarun Madamanchi email :chowdhary12345678@gmail.com subject :hellooo message ://////
+2022-05-11 13:25:47,182 - Fast API - INFO  - handlers.py - handlers: contact_us_mail_sending: 90 - name :Tarun Madamanchi email :kahofit605@bunlets.com subject :hellooo message :bfjdknckc
+2022-05-11 13:32:00,877 - Fast API - INFO  - handlers.py - handlers: get_historical: 102 - TCS.NS
+2022-05-11 13:32:02,036 - Fast API - INFO  - handlers.py - handlers: get_historical: 105 -                    High          Low  ...     Volume    Adj Close
+Date                                  ...                        
+2002-08-12    40.000000    38.724998  ...   212976.0    29.410919
+2002-08-13    40.387501    38.875000  ...   153576.0    29.012720
+2002-08-14    39.250000    35.724998  ...   822776.0    27.012486
+2002-08-15    36.462502    36.462502  ...        0.0    27.012486
+2002-08-16    38.000000    35.750000  ...   811856.0    26.947664
+...                 ...          ...  ...        ...          ...
+2022-05-05  3533.000000  3485.350098  ...  1612262.0  3513.399902
+2022-05-06  3474.500000  3424.500000  ...  2010812.0  3432.600098
+2022-05-09  3456.000000  3346.850098  ...  2481830.0  3445.100098
+2022-05-10  3464.800049  3422.000000  ...  1622685.0  3438.750000
+2022-05-11  3448.449951  3390.000000  ...  1108754.0  3399.149902
+
+[4905 rows x 6 columns]
+2022-05-11 13:32:02,258 - Fast API - INFO  - main.py - main: insertintostock: 107 - ##############################################################################
+2022-05-11 13:32:02,258 - Fast API - INFO  - main.py - main: insertintostock: 108 - Today'sTCS.NSStock Data: 
+2022-05-11 13:32:02,258 - Fast API - INFO  - main.py - main: insertintostock: 110 -             Date         High     Low  ...        Close     Volume    Adj Close
+4904  2022-05-11  3448.449951  3390.0  ...  3399.149902  1108754.0  3399.149902
+
+[1 rows x 7 columns]
+2022-05-11 13:32:02,306 - Fast API - INFO  - main.py - main: insertintostock: 111 - ##############################################################################
+2022-05-11 13:33:00,829 - Fast API - INFO  - handlers.py - handlers: get_historical: 102 - TCS.NS
+2022-05-11 13:33:01,908 - Fast API - INFO  - handlers.py - handlers: get_historical: 105 -                    High          Low  ...     Volume    Adj Close
+Date                                  ...                        
+2020-05-11  1951.400024  1909.000000  ...  2449841.0  1893.067749
+2020-05-12  1956.500000  1910.250000  ...  3256595.0  1906.957764
+2020-05-13  1994.000000  1925.650024  ...  2656665.0  1907.104492
+2020-05-14  1923.099976  1891.099976  ...  2263146.0  1860.836670
+2020-05-15  1917.400024  1865.199951  ...  3173682.0  1851.592896
+...                 ...          ...  ...        ...          ...
+2022-05-05  3533.000000  3485.350098  ...  1612262.0  3513.399902
+2022-05-06  3474.500000  3424.500000  ...  2010812.0  3432.600098
+2022-05-09  3456.000000  3346.850098  ...  2481830.0  3445.100098
+2022-05-10  3464.800049  3422.000000  ...  1622685.0  3438.750000
+2022-05-11  3448.449951  3390.000000  ...  1113456.0  3398.850098
+
+[500 rows x 6 columns]
+2022-05-11 13:33:01,947 - Fast API - INFO  - main.py - main: insertintostock: 107 - ##############################################################################
+2022-05-11 13:33:01,947 - Fast API - INFO  - main.py - main: insertintostock: 108 - Today'sTCS.NSStock Data: 
+2022-05-11 13:33:01,947 - Fast API - INFO  - main.py - main: insertintostock: 110 -            Date         High     Low  ...        Close     Volume    Adj Close
+499  2022-05-11  3448.449951  3390.0  ...  3398.850098  1113456.0  3398.850098
+
+[1 rows x 7 columns]
+2022-05-11 13:33:01,966 - Fast API - INFO  - main.py - main: insertintostock: 111 - ##############################################################################
+2022-05-11 13:33:41,340 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 174 - ##############################################################################
+2022-05-11 13:33:41,340 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 176 - Tomorrow's TCS.NS  Closing Price Prediction by ARIMA:3449.575864036043
+2022-05-11 13:33:41,340 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 179 - ARIMA RMSE:52.996812151919215
+2022-05-11 13:33:41,341 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 180 - ##############################################################################
+2022-05-11 13:34:02,980 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 306 - ##############################################################################
+2022-05-11 13:34:02,981 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 307 - Tomorrow's TCS.NS Closing Price Prediction by LSTM: 3512.736328125
+2022-05-11 13:34:02,981 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 308 - LSTM RMSE:99.67154765218707
+2022-05-11 13:34:02,981 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 309 - ##############################################################################
+2022-05-11 13:34:03,119 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 368 - ##############################################################################
+2022-05-11 13:34:03,119 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 369 - Tomorrow's TCS.NS Closing Price Prediction by Linear Regression: 3689.6689076665825
+2022-05-11 13:34:03,119 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 370 - Linear Regression RMSE:207.7535997754137
+2022-05-11 13:34:03,119 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 371 - ##############################################################################
+2022-05-11 13:34:04,402 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 437 - ##############################################################################
+2022-05-11 13:34:04,403 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 438 - Positive Tweets :4Negative Tweets :1Neutral Tweets :295
+2022-05-11 13:34:04,403 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 439 - ##############################################################################
+2022-05-11 13:34:04,457 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 453 - ##############################################################################
+2022-05-11 13:34:04,457 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 454 - Tweets Polarity: Overall Positive
+2022-05-11 13:34:04,458 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 455 - ##############################################################################
+2022-05-11 13:34:04,463 - Fast API - INFO  - handlers.py - handlers: recommending: 561 - ##############################################################################
+2022-05-11 13:34:04,463 - Fast API - INFO  - handlers.py - handlers: recommending: 562 - According to the ML Predictions and Sentiment Analysis of Tweets, aRISEinTCS.NSstock is expected => BUY
+2022-05-11 13:34:04,463 - Fast API - INFO  - main.py - main: insertintostock: 135 - Forecasted Prices for Next 7 days:
+2022-05-11 13:34:04,463 - Fast API - INFO  - main.py - main: insertintostock: 136 - [[3689.66890767]
+ [3627.14173683]
+ [3660.72571883]
+ [3580.08420141]
+ [3592.55971384]
+ [3586.22205606]
+ [3546.40031785]]
+2022-05-11 14:34:28,530 - Fast API - INFO  - handlers.py - handlers: get_historical: 102 - TCS.NS
+2022-05-11 14:34:29,544 - Fast API - INFO  - handlers.py - handlers: get_historical: 105 -                    High          Low  ...     Volume    Adj Close
+Date                                  ...                        
+2020-05-11  1951.400024  1909.000000  ...  2449841.0  1893.067749
+2020-05-12  1956.500000  1910.250000  ...  3256595.0  1906.957764
+2020-05-13  1994.000000  1925.650024  ...  2656665.0  1907.104492
+2020-05-14  1923.099976  1891.099976  ...  2263146.0  1860.836670
+2020-05-15  1917.400024  1865.199951  ...  3173682.0  1851.592773
+...                 ...          ...  ...        ...          ...
+2022-05-05  3533.000000  3485.350098  ...  1612262.0  3513.399902
+2022-05-06  3474.500000  3424.500000  ...  2010812.0  3432.600098
+2022-05-09  3456.000000  3346.850098  ...  2481830.0  3445.100098
+2022-05-10  3464.800049  3422.000000  ...  1622685.0  3438.750000
+2022-05-11  3448.449951  3382.149902  ...  1358193.0  3401.250000
+
+[500 rows x 6 columns]
+2022-05-11 14:34:29,624 - Fast API - INFO  - main.py - main: insertintostock: 107 - ##############################################################################
+2022-05-11 14:34:29,624 - Fast API - INFO  - main.py - main: insertintostock: 108 - Today'sTCS.NSStock Data: 
+2022-05-11 14:34:29,624 - Fast API - INFO  - main.py - main: insertintostock: 110 -            Date         High          Low  ...    Close     Volume  Adj Close
+499  2022-05-11  3448.449951  3382.149902  ...  3401.25  1358193.0    3401.25
+
+[1 rows x 7 columns]
+2022-05-11 14:34:29,655 - Fast API - INFO  - main.py - main: insertintostock: 111 - ##############################################################################
+2022-05-11 14:35:06,920 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 174 - ##############################################################################
+2022-05-11 14:35:06,920 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 176 - Tomorrow's TCS.NS  Closing Price Prediction by ARIMA:3449.575864036043
+2022-05-11 14:35:06,921 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 179 - ARIMA RMSE:52.97825495306273
+2022-05-11 14:35:06,921 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 180 - ##############################################################################
+2022-05-11 14:35:28,454 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 306 - ##############################################################################
+2022-05-11 14:35:28,454 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 307 - Tomorrow's TCS.NS Closing Price Prediction by LSTM: 3519.142578125
+2022-05-11 14:35:28,454 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 308 - LSTM RMSE:98.74764869674401
+2022-05-11 14:35:28,455 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 309 - ##############################################################################
+2022-05-11 14:35:28,615 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 368 - ##############################################################################
+2022-05-11 14:35:28,616 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 369 - Tomorrow's TCS.NS Closing Price Prediction by Linear Regression: 3689.6689076665825
+2022-05-11 14:35:28,616 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 370 - Linear Regression RMSE:207.71708948359174
+2022-05-11 14:35:28,616 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 371 - ##############################################################################
+2022-05-11 14:35:30,544 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 437 - ##############################################################################
+2022-05-11 14:35:30,545 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 438 - Positive Tweets :4Negative Tweets :1Neutral Tweets :295
+2022-05-11 14:35:30,545 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 439 - ##############################################################################
+2022-05-11 14:35:30,597 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 453 - ##############################################################################
+2022-05-11 14:35:30,597 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 454 - Tweets Polarity: Overall Positive
+2022-05-11 14:35:30,597 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 455 - ##############################################################################
+2022-05-11 14:35:30,606 - Fast API - INFO  - handlers.py - handlers: recommending: 561 - ##############################################################################
+2022-05-11 14:35:30,606 - Fast API - INFO  - handlers.py - handlers: recommending: 562 - According to the ML Predictions and Sentiment Analysis of Tweets, aRISEinTCS.NSstock is expected => BUY
+2022-05-11 14:35:30,607 - Fast API - INFO  - main.py - main: insertintostock: 141 - Forecasted Prices for Next 7 days:
+2022-05-11 14:35:30,607 - Fast API - INFO  - main.py - main: insertintostock: 142 - [[3689.66890767]
+ [3627.14173683]
+ [3660.72571883]
+ [3580.08420141]
+ [3592.55971384]
+ [3586.22205606]
+ [3548.79551877]]
+2022-05-11 14:37:02,140 - Fast API - INFO  - handlers.py - handlers: get_historical: 102 - TCS.NS
+2022-05-11 14:37:03,161 - Fast API - INFO  - handlers.py - handlers: get_historical: 105 -                    High          Low  ...     Volume    Adj Close
+Date                                  ...                        
+2020-05-11  1951.400024  1909.000000  ...  2449841.0  1893.067627
+2020-05-12  1956.500000  1910.250000  ...  3256595.0  1906.957764
+2020-05-13  1994.000000  1925.650024  ...  2656665.0  1907.104492
+2020-05-14  1923.099976  1891.099976  ...  2263146.0  1860.836670
+2020-05-15  1917.400024  1865.199951  ...  3173682.0  1851.592896
+...                 ...          ...  ...        ...          ...
+2022-05-05  3533.000000  3485.350098  ...  1612262.0  3513.399902
+2022-05-06  3474.500000  3424.500000  ...  2010812.0  3432.600098
+2022-05-09  3456.000000  3346.850098  ...  2481830.0  3445.100098
+2022-05-10  3464.800049  3422.000000  ...  1622685.0  3438.750000
+2022-05-11  3448.449951  3382.149902  ...  1366106.0  3404.949951
+
+[500 rows x 6 columns]
+2022-05-11 14:37:03,256 - Fast API - INFO  - main.py - main: insertintostock: 107 - ##############################################################################
+2022-05-11 14:37:03,256 - Fast API - INFO  - main.py - main: insertintostock: 108 - Today'sTCS.NSStock Data: 
+2022-05-11 14:37:03,257 - Fast API - INFO  - main.py - main: insertintostock: 110 -            Date         High          Low  ...        Close     Volume    Adj Close
+499  2022-05-11  3448.449951  3382.149902  ...  3404.949951  1366106.0  3404.949951
+
+[1 rows x 7 columns]
+2022-05-11 14:37:03,299 - Fast API - INFO  - main.py - main: insertintostock: 111 - ##############################################################################
+2022-05-11 14:38:31,604 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 174 - ##############################################################################
+2022-05-11 14:38:31,604 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 176 - Tomorrow's TCS.NS  Closing Price Prediction by ARIMA:3449.575864036043
+2022-05-11 14:38:31,606 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 179 - ARIMA RMSE:52.95176355741456
+2022-05-11 14:38:31,606 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 180 - ##############################################################################
+2022-05-11 14:38:54,162 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 306 - ##############################################################################
+2022-05-11 14:38:54,162 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 307 - Tomorrow's TCS.NS Closing Price Prediction by LSTM: 3554.344970703125
+2022-05-11 14:38:54,163 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 308 - LSTM RMSE:103.72244296981381
+2022-05-11 14:38:54,163 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 309 - ##############################################################################
+2022-05-11 14:38:54,306 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 368 - ##############################################################################
+2022-05-11 14:38:54,306 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 369 - Tomorrow's TCS.NS Closing Price Prediction by Linear Regression: 3689.6689076665825
+2022-05-11 14:38:54,306 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 370 - Linear Regression RMSE:207.66137297462268
+2022-05-11 14:38:54,306 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 371 - ##############################################################################
+2022-05-11 14:38:55,553 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 437 - ##############################################################################
+2022-05-11 14:38:55,553 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 438 - Positive Tweets :4Negative Tweets :1Neutral Tweets :295
+2022-05-11 14:38:55,554 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 439 - ##############################################################################
+2022-05-11 14:38:55,602 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 453 - ##############################################################################
+2022-05-11 14:38:55,602 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 454 - Tweets Polarity: Overall Positive
+2022-05-11 14:38:55,603 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 455 - ##############################################################################
+2022-05-11 14:38:55,609 - Fast API - INFO  - handlers.py - handlers: recommending: 561 - ##############################################################################
+2022-05-11 14:38:55,609 - Fast API - INFO  - handlers.py - handlers: recommending: 562 - According to the ML Predictions and Sentiment Analysis of Tweets, aRISEinTCS.NSstock is expected => BUY
+2022-05-11 14:38:55,609 - Fast API - INFO  - main.py - main: insertintostock: 141 - Forecasted Prices for Next 7 days:
+2022-05-11 14:38:55,610 - Fast API - INFO  - main.py - main: insertintostock: 142 - [[3689.66890767]
+ [3627.14173683]
+ [3660.72571883]
+ [3580.08420141]
+ [3592.55971384]
+ [3586.22205606]
+ [3552.48822172]]
+2022-05-11 14:40:04,056 - Fast API - INFO  - handlers.py - handlers: get_historical: 102 - TCS.NS
+2022-05-11 14:40:05,145 - Fast API - INFO  - handlers.py - handlers: get_historical: 105 -                    High          Low  ...     Volume    Adj Close
+Date                                  ...                        
+2017-05-11  1180.000000  1161.375000  ...  2071302.0  1067.933960
+2017-05-12  1184.949951  1160.025024  ...  2314446.0  1073.024292
+2017-05-15  1188.974976  1170.800049  ...  1817604.0  1075.047119
+2017-05-16  1217.500000  1186.724976  ...  3601026.0  1104.160767
+2017-05-17  1230.375000  1211.500000  ...  2876198.0  1116.070190
+...                 ...          ...  ...        ...          ...
+2022-05-05  3533.000000  3485.350098  ...  1612262.0  3513.399902
+2022-05-06  3474.500000  3424.500000  ...  2010812.0  3432.600098
+2022-05-09  3456.000000  3346.850098  ...  2481830.0  3445.100098
+2022-05-10  3464.800049  3422.000000  ...  1622685.0  3438.750000
+2022-05-11  3448.449951  3382.149902  ...  1374294.0  3408.100098
+
+[1236 rows x 6 columns]
+2022-05-11 14:40:05,379 - Fast API - INFO  - main.py - main: insertintostock: 107 - ##############################################################################
+2022-05-11 14:40:05,380 - Fast API - INFO  - main.py - main: insertintostock: 108 - Today'sTCS.NSStock Data: 
+2022-05-11 14:40:05,380 - Fast API - INFO  - main.py - main: insertintostock: 110 -             Date         High          Low  ...        Close     Volume    Adj Close
+1235  2022-05-11  3448.449951  3382.149902  ...  3408.100098  1374294.0  3408.100098
+
+[1 rows x 7 columns]
+2022-05-11 14:40:05,462 - Fast API - INFO  - main.py - main: insertintostock: 111 - ##############################################################################
+2022-05-11 14:41:48,901 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 174 - ##############################################################################
+2022-05-11 14:41:48,901 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 176 - Tomorrow's TCS.NS  Closing Price Prediction by ARIMA:3448.418069550843
+2022-05-11 14:41:48,902 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 179 - ARIMA RMSE:47.3361236790808
+2022-05-11 14:41:48,902 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 180 - ##############################################################################
+2022-05-11 14:42:17,360 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 306 - ##############################################################################
+2022-05-11 14:42:17,360 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 307 - Tomorrow's TCS.NS Closing Price Prediction by LSTM: 3413.01611328125
+2022-05-11 14:42:17,360 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 308 - LSTM RMSE:139.92649072783794
+2022-05-11 14:42:17,360 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 309 - ##############################################################################
+2022-05-11 14:42:17,491 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 368 - ##############################################################################
+2022-05-11 14:42:17,491 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 369 - Tomorrow's TCS.NS Closing Price Prediction by Linear Regression: 3684.830614436316
+2022-05-11 14:42:17,492 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 370 - Linear Regression RMSE:181.66360226263643
+2022-05-11 14:42:17,492 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 371 - ##############################################################################
+2022-05-11 14:42:18,885 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 437 - ##############################################################################
+2022-05-11 14:42:18,885 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 438 - Positive Tweets :4Negative Tweets :1Neutral Tweets :295
+2022-05-11 14:42:18,885 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 439 - ##############################################################################
+2022-05-11 14:42:18,941 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 453 - ##############################################################################
+2022-05-11 14:42:18,942 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 454 - Tweets Polarity: Overall Positive
+2022-05-11 14:42:18,942 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 455 - ##############################################################################
+2022-05-11 14:42:18,948 - Fast API - INFO  - handlers.py - handlers: recommending: 561 - ##############################################################################
+2022-05-11 14:42:18,948 - Fast API - INFO  - handlers.py - handlers: recommending: 562 - According to the ML Predictions and Sentiment Analysis of Tweets, aRISEinTCS.NSstock is expected => BUY
+2022-05-11 14:42:18,949 - Fast API - INFO  - main.py - main: insertintostock: 141 - Forecasted Prices for Next 7 days:
+2022-05-11 14:42:18,949 - Fast API - INFO  - main.py - main: insertintostock: 142 - [[3684.83061444]
+ [3620.20766965]
+ [3654.91731324]
+ [3571.57286862]
+ [3584.46653292]
+ [3577.91645072]
+ [3546.30128657]]
+2022-05-11 14:43:27,317 - Fast API - INFO  - handlers.py - handlers: get_historical: 102 - TCS.NS
+2022-05-11 14:43:29,622 - Fast API - INFO  - handlers.py - handlers: get_historical: 105 -                    High          Low  ...     Volume    Adj Close
+Date                                  ...                        
+2020-05-11  1951.400024  1909.000000  ...  2449841.0  1893.067749
+2020-05-12  1956.500000  1910.250000  ...  3256595.0  1906.957886
+2020-05-13  1994.000000  1925.650024  ...  2656665.0  1907.104614
+2020-05-14  1923.099976  1891.099976  ...  2263146.0  1860.836670
+2020-05-15  1917.400024  1865.199951  ...  3173682.0  1851.593018
+...                 ...          ...  ...        ...          ...
+2022-05-05  3533.000000  3485.350098  ...  1612262.0  3513.399902
+2022-05-06  3474.500000  3424.500000  ...  2010812.0  3432.600098
+2022-05-09  3456.000000  3346.850098  ...  2481830.0  3445.100098
+2022-05-10  3464.800049  3422.000000  ...  1622685.0  3438.750000
+2022-05-11  3448.449951  3382.149902  ...  1404487.0  3418.800049
+
+[500 rows x 6 columns]
+2022-05-11 14:43:29,752 - Fast API - INFO  - main.py - main: insertintostock: 107 - ##############################################################################
+2022-05-11 14:43:29,752 - Fast API - INFO  - main.py - main: insertintostock: 108 - Today'sTCS.NSStock Data: 
+2022-05-11 14:43:29,753 - Fast API - INFO  - main.py - main: insertintostock: 110 -            Date         High          Low  ...        Close     Volume    Adj Close
+499  2022-05-11  3448.449951  3382.149902  ...  3418.800049  1404487.0  3418.800049
+
+[1 rows x 7 columns]
+2022-05-11 14:43:29,817 - Fast API - INFO  - main.py - main: insertintostock: 111 - ##############################################################################
+2022-05-11 14:44:06,356 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 174 - ##############################################################################
+2022-05-11 14:44:06,356 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 176 - Tomorrow's TCS.NS  Closing Price Prediction by ARIMA:3449.575864036043
+2022-05-11 14:44:06,357 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 179 - ARIMA RMSE:52.87547005437279
+2022-05-11 14:44:06,357 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 180 - ##############################################################################
+2022-05-11 14:44:23,526 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 306 - ##############################################################################
+2022-05-11 14:44:23,527 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 307 - Tomorrow's TCS.NS Closing Price Prediction by LSTM: 3541.9248046875
+2022-05-11 14:44:23,527 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 308 - LSTM RMSE:100.92230105665843
+2022-05-11 14:44:23,527 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 309 - ##############################################################################
+2022-05-11 14:44:23,637 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 368 - ##############################################################################
+2022-05-11 14:44:23,637 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 369 - Tomorrow's TCS.NS Closing Price Prediction by Linear Regression: 3689.6689076665825
+2022-05-11 14:44:23,637 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 370 - Linear Regression RMSE:207.45897476137173
+2022-05-11 14:44:23,637 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 371 - ##############################################################################
+2022-05-11 14:44:24,905 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 437 - ##############################################################################
+2022-05-11 14:44:24,905 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 438 - Positive Tweets :4Negative Tweets :1Neutral Tweets :295
+2022-05-11 14:44:24,905 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 439 - ##############################################################################
+2022-05-11 14:44:24,957 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 453 - ##############################################################################
+2022-05-11 14:44:24,957 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 454 - Tweets Polarity: Overall Positive
+2022-05-11 14:44:24,957 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 455 - ##############################################################################
+2022-05-11 14:44:24,964 - Fast API - INFO  - handlers.py - handlers: recommending: 561 - ##############################################################################
+2022-05-11 14:44:24,964 - Fast API - INFO  - handlers.py - handlers: recommending: 562 - According to the ML Predictions and Sentiment Analysis of Tweets, aRISEinTCS.NSstock is expected => BUY
+2022-05-11 14:44:24,964 - Fast API - INFO  - main.py - main: insertintostock: 141 - Forecasted Prices for Next 7 days:
+2022-05-11 14:44:24,965 - Fast API - INFO  - main.py - main: insertintostock: 142 - [[3689.66890767]
+ [3627.14173683]
+ [3660.72571883]
+ [3580.08420141]
+ [3592.55971384]
+ [3586.22205606]
+ [3566.31118696]]
+2022-05-11 14:45:55,310 - Fast API - INFO  - handlers.py - handlers: get_historical: 102 - TCS.NS
+2022-05-11 14:45:57,020 - Fast API - INFO  - handlers.py - handlers: get_historical: 105 -                    High          Low  ...     Volume    Adj Close
+Date                                  ...                        
+2012-05-11   618.450012   610.599976  ...  2745190.0   508.124329
+2012-05-14   617.000000   610.000000  ...  2573752.0   506.142609
+2012-05-15   616.500000   609.900024  ...  1875510.0   506.287170
+2012-05-16   620.950012   603.375000  ...  4567936.0   505.090057
+2012-05-17   617.500000   599.525024  ...  4137524.0   504.511841
+...                 ...          ...  ...        ...          ...
+2022-05-05  3533.000000  3485.350098  ...  1612262.0  3513.399902
+2022-05-06  3474.500000  3424.500000  ...  2010812.0  3432.600098
+2022-05-09  3456.000000  3346.850098  ...  2481830.0  3445.100098
+2022-05-10  3464.800049  3422.000000  ...  1622685.0  3438.750000
+2022-05-11  3448.449951  3382.149902  ...  1419469.0  3416.949951
+
+[2464 rows x 6 columns]
+2022-05-11 14:45:57,292 - Fast API - INFO  - main.py - main: insertintostock: 107 - ##############################################################################
+2022-05-11 14:45:57,292 - Fast API - INFO  - main.py - main: insertintostock: 108 - Today'sTCS.NSStock Data: 
+2022-05-11 14:45:57,294 - Fast API - INFO  - main.py - main: insertintostock: 110 -             Date         High          Low  ...        Close     Volume    Adj Close
+2463  2022-05-11  3448.449951  3382.149902  ...  3416.949951  1419469.0  3416.949951
+
+[1 rows x 7 columns]
+2022-05-11 14:45:57,367 - Fast API - INFO  - main.py - main: insertintostock: 111 - ##############################################################################
+2022-05-11 14:49:51,613 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 174 - ##############################################################################
+2022-05-11 14:49:51,614 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 176 - Tomorrow's TCS.NS  Closing Price Prediction by ARIMA:3448.8128671582067
+2022-05-11 14:49:51,614 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 179 - ARIMA RMSE:45.26751085494148
+2022-05-11 14:49:51,614 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 180 - ##############################################################################
+2022-05-11 14:50:34,729 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 306 - ##############################################################################
+2022-05-11 14:50:34,729 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 307 - Tomorrow's TCS.NS Closing Price Prediction by LSTM: 3454.99560546875
+2022-05-11 14:50:34,729 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 308 - LSTM RMSE:90.9097148152938
+2022-05-11 14:50:34,729 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 309 - ##############################################################################
+2022-05-11 14:50:34,916 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 368 - ##############################################################################
+2022-05-11 14:50:34,916 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 369 - Tomorrow's TCS.NS Closing Price Prediction by Linear Regression: 3667.4475731436482
+2022-05-11 14:50:34,917 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 370 - Linear Regression RMSE:150.25795548993733
+2022-05-11 14:50:34,917 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 371 - ##############################################################################
+2022-05-11 14:50:36,128 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 437 - ##############################################################################
+2022-05-11 14:50:36,128 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 438 - Positive Tweets :4Negative Tweets :1Neutral Tweets :295
+2022-05-11 14:50:36,129 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 439 - ##############################################################################
+2022-05-11 14:50:36,200 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 453 - ##############################################################################
+2022-05-11 14:50:36,201 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 454 - Tweets Polarity: Overall Positive
+2022-05-11 14:50:36,201 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 455 - ##############################################################################
+2022-05-11 14:50:36,207 - Fast API - INFO  - handlers.py - handlers: recommending: 561 - ##############################################################################
+2022-05-11 14:50:36,208 - Fast API - INFO  - handlers.py - handlers: recommending: 562 - According to the ML Predictions and Sentiment Analysis of Tweets, aRISEinTCS.NSstock is expected => BUY
+2022-05-11 14:50:36,208 - Fast API - INFO  - main.py - main: insertintostock: 141 - Forecasted Prices for Next 7 days:
+2022-05-11 14:50:36,209 - Fast API - INFO  - main.py - main: insertintostock: 142 - [[3667.44757314]
+ [3602.91093439]
+ [3637.57422213]
+ [3554.3410867 ]
+ [3567.21753111]
+ [3560.67619675]
+ [3538.21962742]]
+2022-05-11 15:00:08,513 - Fast API - INFO  - handlers.py - handlers: get_historical: 102 - TCS.NS
+2022-05-11 15:00:09,993 - Fast API - INFO  - handlers.py - handlers: get_historical: 105 -                    High          Low  ...     Volume    Adj Close
+Date                                  ...                        
+2002-08-12    40.000000    38.724998  ...   212976.0    29.410923
+2002-08-13    40.387501    38.875000  ...   153576.0    29.012720
+2002-08-14    39.250000    35.724998  ...   822776.0    27.012484
+2002-08-15    36.462502    36.462502  ...        0.0    27.012484
+2002-08-16    38.000000    35.750000  ...   811856.0    26.947659
+...                 ...          ...  ...        ...          ...
+2022-05-05  3533.000000  3485.350098  ...  1612262.0  3513.399902
+2022-05-06  3474.500000  3424.500000  ...  2010812.0  3432.600098
+2022-05-09  3456.000000  3346.850098  ...  2481830.0  3445.100098
+2022-05-10  3464.800049  3422.000000  ...  1622685.0  3438.750000
+2022-05-11  3448.449951  3382.149902  ...  1504635.0  3410.949951
+
+[4905 rows x 6 columns]
+2022-05-11 15:00:10,487 - Fast API - INFO  - main.py - main: insertintostock: 107 - ##############################################################################
+2022-05-11 15:00:10,488 - Fast API - INFO  - main.py - main: insertintostock: 108 - Today'sTCS.NSStock Data: 
+2022-05-11 15:00:10,488 - Fast API - INFO  - main.py - main: insertintostock: 110 -             Date         High          Low  ...        Close     Volume    Adj Close
+4904  2022-05-11  3448.449951  3382.149902  ...  3410.949951  1504635.0  3410.949951
+
+[1 rows x 7 columns]
+2022-05-11 15:00:10,579 - Fast API - INFO  - main.py - main: insertintostock: 111 - ##############################################################################
+2022-05-11 15:10:06,302 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 174 - ##############################################################################
+2022-05-11 15:10:06,302 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 176 - Tomorrow's TCS.NS  Closing Price Prediction by ARIMA:3448.1271549099433
+2022-05-11 15:10:06,303 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 179 - ARIMA RMSE:40.97052849105961
+2022-05-11 15:10:06,304 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 180 - ##############################################################################
+2022-05-11 15:11:15,460 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 306 - ##############################################################################
+2022-05-11 15:11:15,461 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 307 - Tomorrow's TCS.NS Closing Price Prediction by LSTM: 3413.40234375
+2022-05-11 15:11:15,461 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 308 - LSTM RMSE:84.07032967322841
+2022-05-11 15:11:15,461 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 309 - ##############################################################################
+2022-05-11 15:11:15,570 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 368 - ##############################################################################
+2022-05-11 15:11:15,570 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 369 - Tomorrow's TCS.NS Closing Price Prediction by Linear Regression: 3694.8787619734285
+2022-05-11 15:11:15,571 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 370 - Linear Regression RMSE:147.14418563236637
+2022-05-11 15:11:15,571 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 371 - ##############################################################################
+2022-05-11 15:11:16,942 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 437 - ##############################################################################
+2022-05-11 15:11:16,943 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 438 - Positive Tweets :4Negative Tweets :1Neutral Tweets :295
+2022-05-11 15:11:16,943 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 439 - ##############################################################################
+2022-05-11 15:11:16,986 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 453 - ##############################################################################
+2022-05-11 15:11:16,986 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 454 - Tweets Polarity: Overall Positive
+2022-05-11 15:11:16,986 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 455 - ##############################################################################
+2022-05-11 15:11:16,993 - Fast API - INFO  - handlers.py - handlers: recommending: 561 - ##############################################################################
+2022-05-11 15:11:16,993 - Fast API - INFO  - handlers.py - handlers: recommending: 562 - According to the ML Predictions and Sentiment Analysis of Tweets, aRISEinTCS.NSstock is expected => BUY
+2022-05-11 15:11:16,993 - Fast API - INFO  - main.py - main: insertintostock: 141 - Forecasted Prices for Next 7 days:
+2022-05-11 15:11:16,993 - Fast API - INFO  - main.py - main: insertintostock: 142 - [[3694.87876197]
+ [3629.56286252]
+ [3664.64469914]
+ [3580.40654837]
+ [3593.43847201]
+ [3586.81815299]
+ [3557.83510392]]
+2022-05-11 15:13:36,564 - Fast API - INFO  - handlers.py - handlers: get_historical: 102 - BTC-USD
+2022-05-11 15:13:37,875 - Fast API - INFO  - handlers.py - handlers: get_historical: 105 -                     High           Low  ...       Volume     Adj Close
+Date                                    ...                           
+2014-09-17    468.174011    452.421997  ...     21056800    457.334015
+2014-09-18    456.859985    413.104004  ...     34483200    424.440002
+2014-09-19    427.834991    384.532013  ...     37919700    394.795990
+2014-09-20    423.295990    389.882996  ...     36863600    408.903992
+2014-09-21    412.425995    393.181000  ...     26580100    398.821014
+...                  ...           ...  ...          ...           ...
+2022-05-07  36129.925781  34940.824219  ...  24375896406  35501.953125
+2022-05-08  35502.941406  33878.964844  ...  36763041910  34059.265625
+2022-05-09  34222.074219  30296.953125  ...  63355494961  30296.953125
+2022-05-10  32596.308594  29944.802734  ...  59811038817  31022.906250
+2022-05-11  31707.849609  30334.750000  ...  58187059200  31585.746094
+
+[2794 rows x 6 columns]
+2022-05-11 15:13:37,971 - Fast API - INFO  - main.py - main: insertintocrypto: 168 - ##############################################################################
+2022-05-11 15:13:37,971 - Fast API - INFO  - main.py - main: insertintocrypto: 169 - Today'sBTC-USDStock Data: 
+2022-05-11 15:13:37,971 - Fast API - INFO  - main.py - main: insertintocrypto: 171 -             Date          High  ...       Volume     Adj Close
+2793  2022-05-11  31707.849609  ...  58187059200  31585.746094
+
+[1 rows x 7 columns]
+2022-05-11 15:13:37,991 - Fast API - INFO  - main.py - main: insertintocrypto: 172 - ##############################################################################
+2022-05-11 15:17:18,157 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 174 - ##############################################################################
+2022-05-11 15:17:18,157 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 176 - Tomorrow's BTC-USD  Closing Price Prediction by ARIMA:30403.889082954753
+2022-05-11 15:17:18,158 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 179 - ARIMA RMSE:1715.9712190381015
+2022-05-11 15:17:18,158 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 180 - ##############################################################################
+2022-05-11 15:17:57,479 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 306 - ##############################################################################
+2022-05-11 15:17:57,479 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 307 - Tomorrow's BTC-USD Closing Price Prediction by LSTM: 37457.43359375
+2022-05-11 15:17:57,479 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 308 - LSTM RMSE:2955.6915587164585
+2022-05-11 15:17:57,479 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 309 - ##############################################################################
+2022-05-11 15:17:57,615 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 368 - ##############################################################################
+2022-05-11 15:17:57,615 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 369 - Tomorrow's BTC-USD Closing Price Prediction by Linear Regression: 37754.64968566437
+2022-05-11 15:17:57,616 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 370 - Linear Regression RMSE:4760.158577985721
+2022-05-11 15:17:57,616 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 371 - ##############################################################################
+2022-05-11 15:18:17,454 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_crypto: 527 - ##############################################################################
+2022-05-11 15:18:17,454 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_crypto: 528 - Positive Tweets :61Negative Tweets :132Neutral Tweets :107
+2022-05-11 15:18:17,454 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_crypto: 529 - ##############################################################################
+2022-05-11 15:18:17,497 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_crypto: 548 - ##############################################################################
+2022-05-11 15:18:17,497 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_crypto: 549 - Tweets Polarity: Overall Negative
+2022-05-11 15:18:17,497 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_crypto: 550 - ##############################################################################
+2022-05-11 15:18:17,500 - Fast API - INFO  - handlers.py - handlers: recommending: 566 - ##############################################################################
+2022-05-11 15:18:17,500 - Fast API - INFO  - handlers.py - handlers: recommending: 567 - According to the ML Predictions and Sentiment Analysis of Tweets, aFALLinBTC-USDstock is expected => SELL
+2022-05-11 15:18:17,500 - Fast API - INFO  - main.py - main: insertintocrypto: 202 - Forecasted Prices for Next 7 days:
+2022-05-11 15:18:17,500 - Fast API - INFO  - main.py - main: insertintocrypto: 203 - [[37754.64968566]
+ [37204.52857644]
+ [36649.51607157]
+ [35163.88336443]
+ [31289.57620889]
+ [32037.13914705]
+ [32616.73332857]]
+2022-05-11 16:28:40,034 - Fast API - INFO  - handlers.py - handlers: get_historical: 102 - BTC-USD
+2022-05-11 16:28:41,012 - Fast API - INFO  - handlers.py - handlers: get_historical: 105 -                     High           Low  ...       Volume     Adj Close
+Date                                    ...                           
+2020-05-10   9595.581055   8395.107422  ...  63325279337   8756.430664
+2020-05-11   9033.470703   8374.323242  ...  57119858802   8601.795898
+2020-05-12   8949.898438   8569.643555  ...  42142717533   8804.477539
+2020-05-13   9317.878906   8805.387695  ...  45558144023   9269.987305
+2020-05-14   9793.268555   9255.035156  ...  56426907637   9733.721680
+...                  ...           ...  ...          ...           ...
+2022-05-07  36129.925781  34940.824219  ...  24375896406  35501.953125
+2022-05-08  35502.941406  33878.964844  ...  36763041910  34059.265625
+2022-05-09  34222.074219  30296.953125  ...  63355494961  30296.953125
+2022-05-10  32596.308594  29944.802734  ...  59811038817  31022.906250
+2022-05-11  31988.117188  30334.750000  ...  59507105792  31919.529297
+
+[732 rows x 6 columns]
+2022-05-11 16:28:41,090 - Fast API - INFO  - main.py - main: insertintostock: 107 - ##############################################################################
+2022-05-11 16:28:41,090 - Fast API - INFO  - main.py - main: insertintostock: 108 - Today'sBTC-USDStock Data: 
+2022-05-11 16:28:41,091 - Fast API - INFO  - main.py - main: insertintostock: 110 -            Date          High  ...       Volume     Adj Close
+731  2022-05-11  31988.117188  ...  59507105792  31919.529297
+
+[1 rows x 7 columns]
+2022-05-11 16:28:41,115 - Fast API - INFO  - main.py - main: insertintostock: 111 - ##############################################################################
+2022-05-11 16:29:21,886 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 174 - ##############################################################################
+2022-05-11 16:29:21,886 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 176 - Tomorrow's BTC-USD  Closing Price Prediction by ARIMA:30469.413181887474
+2022-05-11 16:29:21,886 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 179 - ARIMA RMSE:1379.6691680329996
+2022-05-11 16:29:21,887 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 180 - ##############################################################################
+2022-05-11 16:29:45,534 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 306 - ##############################################################################
+2022-05-11 16:29:45,534 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 307 - Tomorrow's BTC-USD Closing Price Prediction by LSTM: 38470.5703125
+2022-05-11 16:29:45,534 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 308 - LSTM RMSE:3182.266746236484
+2022-05-11 16:29:45,534 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 309 - ##############################################################################
+2022-05-11 16:29:45,711 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 368 - ##############################################################################
+2022-05-11 16:29:45,711 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 369 - Tomorrow's BTC-USD Closing Price Prediction by Linear Regression: 38417.55055852459
+2022-05-11 16:29:45,711 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 370 - Linear Regression RMSE:4349.126429747697
+2022-05-11 16:29:45,712 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 371 - ##############################################################################
+2022-05-11 16:32:16,298 - Fast API - INFO  - handlers.py - handlers: get_historical: 102 - TCS.NS
+2022-05-11 16:32:17,391 - Fast API - INFO  - handlers.py - handlers: get_historical: 105 -                    High          Low  ...     Volume    Adj Close
+Date                                  ...                        
+2020-05-11  1951.400024  1909.000000  ...  2449841.0  1893.067627
+2020-05-12  1956.500000  1910.250000  ...  3256595.0  1906.957764
+2020-05-13  1994.000000  1925.650024  ...  2656665.0  1907.104614
+2020-05-14  1923.099976  1891.099976  ...  2263146.0  1860.836548
+2020-05-15  1917.400024  1865.199951  ...  3173682.0  1851.592896
+...                 ...          ...  ...        ...          ...
+2022-05-05  3533.000000  3485.350098  ...  1612262.0  3513.399902
+2022-05-06  3474.500000  3424.500000  ...  2010812.0  3432.600098
+2022-05-09  3456.000000  3346.850098  ...  2481830.0  3445.100098
+2022-05-10  3464.800049  3422.000000  ...  1622685.0  3438.750000
+2022-05-11  3448.449951  3382.149902  ...  1841075.0  3412.000000
+
+[500 rows x 6 columns]
+2022-05-11 16:32:17,443 - Fast API - INFO  - main.py - main: insertintostock: 107 - ##############################################################################
+2022-05-11 16:32:17,443 - Fast API - INFO  - main.py - main: insertintostock: 108 - Today'sTCS.NSStock Data: 
+2022-05-11 16:32:17,443 - Fast API - INFO  - main.py - main: insertintostock: 110 -            Date         High          Low    Open   Close     Volume  Adj Close
+499  2022-05-11  3448.449951  3382.149902  3435.0  3412.0  1841075.0     3412.0
+2022-05-11 16:32:17,469 - Fast API - INFO  - main.py - main: insertintostock: 111 - ##############################################################################
+2022-05-11 16:32:52,748 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 174 - ##############################################################################
+2022-05-11 16:32:52,748 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 176 - Tomorrow's TCS.NS  Closing Price Prediction by ARIMA:3449.575864036043
+2022-05-11 16:32:52,748 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 179 - ARIMA RMSE:52.90841164691129
+2022-05-11 16:32:52,748 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 180 - ##############################################################################
+2022-05-11 16:33:11,493 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 306 - ##############################################################################
+2022-05-11 16:33:11,493 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 307 - Tomorrow's TCS.NS Closing Price Prediction by LSTM: 3503.343994140625
+2022-05-11 16:33:11,493 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 308 - LSTM RMSE:100.72681075626883
+2022-05-11 16:33:11,493 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 309 - ##############################################################################
+2022-05-11 16:33:11,628 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 368 - ##############################################################################
+2022-05-11 16:33:11,628 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 369 - Tomorrow's TCS.NS Closing Price Prediction by Linear Regression: 3689.6689076665825
+2022-05-11 16:33:11,629 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 370 - Linear Regression RMSE:207.55713004324141
+2022-05-11 16:33:11,629 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 371 - ##############################################################################
+2022-05-11 16:33:12,976 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 443 - ##############################################################################
+2022-05-11 16:33:12,976 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 444 - Positive Tweets :4Negative Tweets :1Neutral Tweets :295
+2022-05-11 16:33:12,977 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 445 - ##############################################################################
+2022-05-11 16:33:13,041 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 459 - ##############################################################################
+2022-05-11 16:33:13,041 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 460 - Tweets Polarity: Overall Positive
+2022-05-11 16:33:13,041 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 461 - ##############################################################################
+2022-05-11 16:33:13,048 - Fast API - INFO  - handlers.py - handlers: recommending: 567 - ##############################################################################
+2022-05-11 16:33:13,048 - Fast API - INFO  - handlers.py - handlers: recommending: 568 - According to the ML Predictions and Sentiment Analysis of Tweets, aRISEinTCS.NSstock is expected => BUY
+2022-05-11 16:33:13,048 - Fast API - INFO  - main.py - main: insertintostock: 141 - Forecasted Prices for Next 7 days:
+2022-05-11 16:33:13,049 - Fast API - INFO  - main.py - main: insertintostock: 142 - [[3689.66890767]
+ [3627.14173683]
+ [3660.72571883]
+ [3580.08420141]
+ [3592.55971384]
+ [3586.22205606]
+ [3559.52445946]]
+2022-05-11 16:33:53,639 - Fast API - INFO  - handlers.py - handlers: get_historical: 102 - BTC-USD
+2022-05-11 16:33:54,626 - Fast API - INFO  - handlers.py - handlers: get_historical: 105 -                     High           Low  ...       Volume     Adj Close
+Date                                    ...                           
+2020-05-10   9595.581055   8395.107422  ...  63325279337   8756.430664
+2020-05-11   9033.470703   8374.323242  ...  57119858802   8601.795898
+2020-05-12   8949.898438   8569.643555  ...  42142717533   8804.477539
+2020-05-13   9317.878906   8805.387695  ...  45558144023   9269.987305
+2020-05-14   9793.268555   9255.035156  ...  56426907637   9733.721680
+...                  ...           ...  ...          ...           ...
+2022-05-07  36129.925781  34940.824219  ...  24375896406  35501.953125
+2022-05-08  35502.941406  33878.964844  ...  36763041910  34059.265625
+2022-05-09  34222.074219  30296.953125  ...  63355494961  30296.953125
+2022-05-10  32596.308594  29944.802734  ...  59811038817  31022.906250
+2022-05-11  31988.117188  30334.750000  ...  59381624832  31791.005859
+
+[732 rows x 6 columns]
+2022-05-11 16:33:54,673 - Fast API - INFO  - main.py - main: insertintostock: 107 - ##############################################################################
+2022-05-11 16:33:54,674 - Fast API - INFO  - main.py - main: insertintostock: 108 - Today'sBTC-USDStock Data: 
+2022-05-11 16:33:54,674 - Fast API - INFO  - main.py - main: insertintostock: 110 -            Date          High  ...       Volume     Adj Close
+731  2022-05-11  31988.117188  ...  59381624832  31791.005859
+
+[1 rows x 7 columns]
+2022-05-11 16:33:54,694 - Fast API - INFO  - main.py - main: insertintostock: 111 - ##############################################################################
+2022-05-11 16:34:31,897 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 174 - ##############################################################################
+2022-05-11 16:34:31,897 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 176 - Tomorrow's BTC-USD  Closing Price Prediction by ARIMA:30469.413181887474
+2022-05-11 16:34:31,898 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 179 - ARIMA RMSE:1379.042870468663
+2022-05-11 16:34:31,898 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 180 - ##############################################################################
+2022-05-11 16:34:49,183 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 306 - ##############################################################################
+2022-05-11 16:34:49,183 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 307 - Tomorrow's BTC-USD Closing Price Prediction by LSTM: 36010.28125
+2022-05-11 16:34:49,183 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 308 - LSTM RMSE:2507.016243758665
+2022-05-11 16:34:49,183 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 309 - ##############################################################################
+2022-05-11 16:34:49,351 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 368 - ##############################################################################
+2022-05-11 16:34:49,351 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 369 - Tomorrow's BTC-USD Closing Price Prediction by Linear Regression: 38417.55055852459
+2022-05-11 16:34:49,351 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 370 - Linear Regression RMSE:4351.176406185007
+2022-05-11 16:34:49,351 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 371 - ##############################################################################
+2022-05-11 16:37:54,333 - Fast API - INFO  - handlers.py - handlers: get_historical: 102 - BTC-USD
+2022-05-11 16:37:55,255 - Fast API - INFO  - handlers.py - handlers: get_historical: 105 -                     High           Low  ...       Volume     Adj Close
+Date                                    ...                           
+2020-05-10   9595.581055   8395.107422  ...  63325279337   8756.430664
+2020-05-11   9033.470703   8374.323242  ...  57119858802   8601.795898
+2020-05-12   8949.898438   8569.643555  ...  42142717533   8804.477539
+2020-05-13   9317.878906   8805.387695  ...  45558144023   9269.987305
+2020-05-14   9793.268555   9255.035156  ...  56426907637   9733.721680
+...                  ...           ...  ...          ...           ...
+2022-05-07  36129.925781  34940.824219  ...  24375896406  35501.953125
+2022-05-08  35502.941406  33878.964844  ...  36763041910  34059.265625
+2022-05-09  34222.074219  30296.953125  ...  63355494961  30296.953125
+2022-05-10  32596.308594  29944.802734  ...  59811038817  31022.906250
+2022-05-11  31988.117188  30334.750000  ...  59187154944  31579.720703
+
+[732 rows x 6 columns]
+2022-05-11 16:37:55,321 - Fast API - INFO  - main.py - main: insertintostock: 107 - ##############################################################################
+2022-05-11 16:37:55,321 - Fast API - INFO  - main.py - main: insertintostock: 108 - Today'sBTC-USDStock Data: 
+2022-05-11 16:37:55,321 - Fast API - INFO  - main.py - main: insertintostock: 110 -            Date          High  ...       Volume     Adj Close
+731  2022-05-11  31988.117188  ...  59187154944  31579.720703
+
+[1 rows x 7 columns]
+2022-05-11 16:37:55,345 - Fast API - INFO  - main.py - main: insertintostock: 111 - ##############################################################################
+2022-05-11 16:38:32,330 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 174 - ##############################################################################
+2022-05-11 16:38:32,330 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 176 - Tomorrow's BTC-USD  Closing Price Prediction by ARIMA:30469.413181887474
+2022-05-11 16:38:32,330 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 179 - ARIMA RMSE:1378.1898591584513
+2022-05-11 16:38:32,330 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 180 - ##############################################################################
+2022-05-11 16:38:53,022 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 306 - ##############################################################################
+2022-05-11 16:38:53,022 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 307 - Tomorrow's BTC-USD Closing Price Prediction by LSTM: 37772.20703125
+2022-05-11 16:38:53,023 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 308 - LSTM RMSE:2829.319857001178
+2022-05-11 16:38:53,023 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 309 - ##############################################################################
+2022-05-11 16:38:53,162 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 368 - ##############################################################################
+2022-05-11 16:38:53,163 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 369 - Tomorrow's BTC-USD Closing Price Prediction by Linear Regression: 38417.55055852459
+2022-05-11 16:38:53,163 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 370 - Linear Regression RMSE:4354.603236819699
+2022-05-11 16:38:53,163 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 371 - ##############################################################################
+2022-05-11 16:43:22,567 - Fast API - INFO  - handlers.py - handlers: get_historical: 102 - BTC-USD
+2022-05-11 16:43:23,541 - Fast API - INFO  - handlers.py - handlers: get_historical: 105 -                     High           Low  ...       Volume     Adj Close
+Date                                    ...                           
+2020-05-10   9595.581055   8395.107422  ...  63325279337   8756.430664
+2020-05-11   9033.470703   8374.323242  ...  57119858802   8601.795898
+2020-05-12   8949.898438   8569.643555  ...  42142717533   8804.477539
+2020-05-13   9317.878906   8805.387695  ...  45558144023   9269.987305
+2020-05-14   9793.268555   9255.035156  ...  56426907637   9733.721680
+...                  ...           ...  ...          ...           ...
+2022-05-07  36129.925781  34940.824219  ...  24375896406  35501.953125
+2022-05-08  35502.941406  33878.964844  ...  36763041910  34059.265625
+2022-05-09  34222.074219  30296.953125  ...  63355494961  30296.953125
+2022-05-10  32596.308594  29944.802734  ...  59811038817  31022.906250
+2022-05-11  31988.117188  30334.750000  ...  59378589696  31702.564453
+
+[732 rows x 6 columns]
+2022-05-11 16:43:23,600 - Fast API - INFO  - main.py - main: insertintostock: 107 - ##############################################################################
+2022-05-11 16:43:23,601 - Fast API - INFO  - main.py - main: insertintostock: 108 - Today'sBTC-USDStock Data: 
+2022-05-11 16:43:23,601 - Fast API - INFO  - main.py - main: insertintostock: 110 -            Date          High  ...       Volume     Adj Close
+731  2022-05-11  31988.117188  ...  59378589696  31702.564453
+
+[1 rows x 7 columns]
+2022-05-11 16:43:23,626 - Fast API - INFO  - main.py - main: insertintostock: 111 - ##############################################################################
+2022-05-11 16:44:00,604 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 174 - ##############################################################################
+2022-05-11 16:44:00,604 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 176 - Tomorrow's BTC-USD  Closing Price Prediction by ARIMA:30469.413181887474
+2022-05-11 16:44:00,605 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 179 - ARIMA RMSE:1378.6590704515822
+2022-05-11 16:44:00,605 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 180 - ##############################################################################
+2022-05-11 16:44:21,554 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 306 - ##############################################################################
+2022-05-11 16:44:21,554 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 307 - Tomorrow's BTC-USD Closing Price Prediction by LSTM: 38839.7734375
+2022-05-11 16:44:21,554 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 308 - LSTM RMSE:3643.332981935258
+2022-05-11 16:44:21,555 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 309 - ##############################################################################
+2022-05-11 16:44:21,705 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 368 - ##############################################################################
+2022-05-11 16:44:21,705 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 369 - Tomorrow's BTC-USD Closing Price Prediction by Linear Regression: 38417.55055852459
+2022-05-11 16:44:21,705 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 370 - Linear Regression RMSE:4352.602249682158
+2022-05-11 16:44:21,706 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 371 - ##############################################################################
+2022-05-11 16:44:41,012 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 446 - ##############################################################################
+2022-05-11 16:44:41,012 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 447 - Positive Tweets :109Negative Tweets :180Neutral Tweets :11
+2022-05-11 16:44:41,012 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 448 - ##############################################################################
+2022-05-11 16:44:41,076 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 462 - ##############################################################################
+2022-05-11 16:44:41,076 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 463 - Tweets Polarity: Overall Positive
+2022-05-11 16:44:41,077 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 464 - ##############################################################################
+2022-05-11 16:44:41,089 - Fast API - INFO  - handlers.py - handlers: recommending: 570 - ##############################################################################
+2022-05-11 16:44:41,089 - Fast API - INFO  - handlers.py - handlers: recommending: 571 - According to the ML Predictions and Sentiment Analysis of Tweets, aRISEinBTC-USDstock is expected => BUY
+2022-05-11 16:44:41,090 - Fast API - INFO  - main.py - main: insertintostock: 141 - Forecasted Prices for Next 7 days:
+2022-05-11 16:44:41,090 - Fast API - INFO  - main.py - main: insertintostock: 142 - [[38417.55055852]
+ [37878.45603307]
+ [37334.5681547 ]
+ [35878.71335141]
+ [32082.06250039]
+ [32814.64134646]
+ [33500.5027403 ]]
+2022-05-11 17:01:19,926 - Fast API - INFO  - handlers.py - handlers: get_historical: 102 - BTC-USD
+2022-05-11 17:01:22,669 - Fast API - INFO  - handlers.py - handlers: get_historical: 105 -                     High           Low  ...       Volume     Adj Close
+Date                                    ...                           
+2020-05-10   9595.581055   8395.107422  ...  63325279337   8756.430664
+2020-05-11   9033.470703   8374.323242  ...  57119858802   8601.795898
+2020-05-12   8949.898438   8569.643555  ...  42142717533   8804.477539
+2020-05-13   9317.878906   8805.387695  ...  45558144023   9269.987305
+2020-05-14   9793.268555   9255.035156  ...  56426907637   9733.721680
+...                  ...           ...  ...          ...           ...
+2022-05-07  36129.925781  34940.824219  ...  24375896406  35501.953125
+2022-05-08  35502.941406  33878.964844  ...  36763041910  34059.265625
+2022-05-09  34222.074219  30296.953125  ...  63355494961  30296.953125
+2022-05-10  32596.308594  29944.802734  ...  59811038817  31022.906250
+2022-05-11  31988.117188  30334.750000  ...  59474202624  31630.373047
+
+[732 rows x 6 columns]
+2022-05-11 17:01:22,764 - Fast API - INFO  - main.py - main: insertintostock: 107 - ##############################################################################
+2022-05-11 17:01:22,764 - Fast API - INFO  - main.py - main: insertintostock: 108 - Today'sBTC-USDStock Data: 
+2022-05-11 17:01:22,765 - Fast API - INFO  - main.py - main: insertintostock: 110 -            Date          High  ...       Volume     Adj Close
+731  2022-05-11  31988.117188  ...  59474202624  31630.373047
+
+[1 rows x 7 columns]
+2022-05-11 17:01:22,799 - Fast API - INFO  - main.py - main: insertintostock: 111 - ##############################################################################
+2022-05-11 17:01:58,880 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 174 - ##############################################################################
+2022-05-11 17:01:58,881 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 176 - Tomorrow's BTC-USD  Closing Price Prediction by ARIMA:30469.413181887474
+2022-05-11 17:01:58,881 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 179 - ARIMA RMSE:1378.374325713856
+2022-05-11 17:01:58,882 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 180 - ##############################################################################
+2022-05-11 17:02:19,691 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 306 - ##############################################################################
+2022-05-11 17:02:19,692 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 307 - Tomorrow's BTC-USD Closing Price Prediction by LSTM: 37244.23046875
+2022-05-11 17:02:19,692 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 308 - LSTM RMSE:2536.91404231439
+2022-05-11 17:02:19,692 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 309 - ##############################################################################
+2022-05-11 17:02:19,809 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 368 - ##############################################################################
+2022-05-11 17:02:19,809 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 369 - Tomorrow's BTC-USD Closing Price Prediction by Linear Regression: 38417.55055852459
+2022-05-11 17:02:19,809 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 370 - Linear Regression RMSE:4353.775278695437
+2022-05-11 17:02:19,809 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 371 - ##############################################################################
+2022-05-11 17:02:41,248 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 446 - ##############################################################################
+2022-05-11 17:02:41,248 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 447 - Positive Tweets :115Negative Tweets :185Neutral Tweets :0
+2022-05-11 17:02:41,249 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 448 - ##############################################################################
+2022-05-11 17:02:41,310 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 462 - ##############################################################################
+2022-05-11 17:02:41,310 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 463 - Tweets Polarity: Overall Positive
+2022-05-11 17:02:41,310 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 464 - ##############################################################################
+2022-05-11 17:02:41,318 - Fast API - INFO  - handlers.py - handlers: recommending: 481 - ##############################################################################
+2022-05-11 17:02:41,318 - Fast API - INFO  - handlers.py - handlers: recommending: 482 - According to the ML Predictions and Sentiment Analysis of Tweets, aRISEinBTC-USDstock is expected => BUY
+2022-05-11 17:02:41,318 - Fast API - INFO  - main.py - main: insertintostock: 141 - Forecasted Prices for Next 7 days:
+2022-05-11 17:02:41,319 - Fast API - INFO  - main.py - main: insertintostock: 142 - [[38417.55055852]
+ [37878.45603307]
+ [37334.5681547 ]
+ [35878.71335141]
+ [32082.06250039]
+ [32814.64134646]
+ [33427.65244836]]
+2022-05-11 17:13:30,807 - Fast API - INFO  - handlers.py - handlers: get_historical: 102 - BTC-USD
+2022-05-11 17:13:31,769 - Fast API - INFO  - handlers.py - handlers: get_historical: 105 -                     High           Low  ...       Volume     Adj Close
+Date                                    ...                           
+2020-05-10   9595.581055   8395.107422  ...  63325279337   8756.430664
+2020-05-11   9033.470703   8374.323242  ...  57119858802   8601.795898
+2020-05-12   8949.898438   8569.643555  ...  42142717533   8804.477539
+2020-05-13   9317.878906   8805.387695  ...  45558144023   9269.987305
+2020-05-14   9793.268555   9255.035156  ...  56426907637   9733.721680
+...                  ...           ...  ...          ...           ...
+2022-05-07  36129.925781  34940.824219  ...  24375896406  35501.953125
+2022-05-08  35502.941406  33878.964844  ...  36763041910  34059.265625
+2022-05-09  34222.074219  30296.953125  ...  63355494961  30296.953125
+2022-05-10  32596.308594  29944.802734  ...  59811038817  31022.906250
+2022-05-11  31988.117188  30334.750000  ...  59562999808  31669.091797
+
+[732 rows x 6 columns]
+2022-05-11 17:13:31,828 - Fast API - INFO  - main.py - main: insertintostock: 107 - ##############################################################################
+2022-05-11 17:13:31,828 - Fast API - INFO  - main.py - main: insertintostock: 108 - Today'sBTC-USDStock Data: 
+2022-05-11 17:13:31,828 - Fast API - INFO  - main.py - main: insertintostock: 110 -            Date          High  ...       Volume     Adj Close
+731  2022-05-11  31988.117188  ...  59562999808  31669.091797
+
+[1 rows x 7 columns]
+2022-05-11 17:13:31,847 - Fast API - INFO  - main.py - main: insertintostock: 111 - ##############################################################################
+2022-05-11 17:14:10,020 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 174 - ##############################################################################
+2022-05-11 17:14:10,020 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 176 - Tomorrow's BTC-USD  Closing Price Prediction by ARIMA:30469.413181887474
+2022-05-11 17:14:10,020 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 179 - ARIMA RMSE:1378.5238537000982
+2022-05-11 17:14:10,021 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 180 - ##############################################################################
+2022-05-11 17:14:30,412 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 306 - ##############################################################################
+2022-05-11 17:14:30,413 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 307 - Tomorrow's BTC-USD Closing Price Prediction by LSTM: 37418.08203125
+2022-05-11 17:14:30,413 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 308 - LSTM RMSE:2628.225451070047
+2022-05-11 17:14:30,413 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 309 - ##############################################################################
+2022-05-11 17:14:30,536 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 368 - ##############################################################################
+2022-05-11 17:14:30,536 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 369 - Tomorrow's BTC-USD Closing Price Prediction by Linear Regression: 38417.55055852459
+2022-05-11 17:14:30,536 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 370 - Linear Regression RMSE:4353.1451186489485
+2022-05-11 17:14:30,536 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 371 - ##############################################################################
+2022-05-11 17:14:51,545 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 446 - ##############################################################################
+2022-05-11 17:14:51,545 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 447 - Positive Tweets :115Negative Tweets :185Neutral Tweets :20
+2022-05-11 17:14:51,545 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 448 - ##############################################################################
+2022-05-11 17:14:51,614 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 462 - ##############################################################################
+2022-05-11 17:14:51,614 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 463 - Tweets Polarity: Overall Positive
+2022-05-11 17:14:51,614 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 464 - ##############################################################################
+2022-05-11 17:14:51,622 - Fast API - INFO  - handlers.py - handlers: recommending: 481 - ##############################################################################
+2022-05-11 17:14:51,623 - Fast API - INFO  - handlers.py - handlers: recommending: 482 - According to the ML Predictions and Sentiment Analysis of Tweets, aRISEinBTC-USDstock is expected => BUY
+2022-05-11 17:14:51,623 - Fast API - INFO  - main.py - main: insertintostock: 141 - Forecasted Prices for Next 7 days:
+2022-05-11 17:14:51,624 - Fast API - INFO  - main.py - main: insertintostock: 142 - [[38417.55055852]
+ [37878.45603307]
+ [37334.5681547 ]
+ [35878.71335141]
+ [32082.06250039]
+ [32814.64134646]
+ [33466.72458156]]
+2022-05-11 17:56:04,072 - Fast API - INFO  - handlers.py - handlers: get_historical: 102 - TCS.NS
+2022-05-11 17:56:04,945 - Fast API - INFO  - handlers.py - handlers: get_historical: 105 -                    High          Low  ...     Volume    Adj Close
+Date                                  ...                        
+2020-05-11  1951.400024  1909.000000  ...  2449841.0  1893.067627
+2020-05-12  1956.500000  1910.250000  ...  3256595.0  1906.957642
+2020-05-13  1994.000000  1925.650024  ...  2656665.0  1907.104492
+2020-05-14  1923.099976  1891.099976  ...  2263146.0  1860.836792
+2020-05-15  1917.400024  1865.199951  ...  3173682.0  1851.593140
+...                 ...          ...  ...        ...          ...
+2022-05-05  3533.000000  3485.350098  ...  1612262.0  3513.399902
+2022-05-06  3474.500000  3424.500000  ...  2010812.0  3432.600098
+2022-05-09  3456.000000  3346.850098  ...  2481830.0  3445.100098
+2022-05-10  3464.800049  3422.000000  ...  1622685.0  3438.750000
+2022-05-11  3448.449951  3382.149902  ...  1841075.0  3412.000000
+
+[500 rows x 6 columns]
+2022-05-11 17:56:05,004 - Fast API - INFO  - main.py - main: insertintostock: 107 - ##############################################################################
+2022-05-11 17:56:05,004 - Fast API - INFO  - main.py - main: insertintostock: 108 - Today'sTCS.NSStock Data: 
+2022-05-11 17:56:05,004 - Fast API - INFO  - main.py - main: insertintostock: 110 -            Date         High          Low    Open   Close     Volume  Adj Close
+499  2022-05-11  3448.449951  3382.149902  3435.0  3412.0  1841075.0     3412.0
+2022-05-11 17:56:05,036 - Fast API - INFO  - main.py - main: insertintostock: 111 - ##############################################################################
+2022-05-11 17:56:41,752 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 174 - ##############################################################################
+2022-05-11 17:56:41,752 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 176 - Tomorrow's TCS.NS  Closing Price Prediction by ARIMA:3449.575864036043
+2022-05-11 17:56:41,753 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 179 - ARIMA RMSE:52.90841164691129
+2022-05-11 17:56:41,753 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 180 - ##############################################################################
+2022-05-11 17:57:01,318 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 306 - ##############################################################################
+2022-05-11 17:57:01,318 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 307 - Tomorrow's TCS.NS Closing Price Prediction by LSTM: 3562.480224609375
+2022-05-11 17:57:01,318 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 308 - LSTM RMSE:108.0149054600326
+2022-05-11 17:57:01,318 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 309 - ##############################################################################
+2022-05-11 17:57:01,437 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 368 - ##############################################################################
+2022-05-11 17:57:01,437 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 369 - Tomorrow's TCS.NS Closing Price Prediction by Linear Regression: 3689.6689076665825
+2022-05-11 17:57:01,437 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 370 - Linear Regression RMSE:207.55713004324141
+2022-05-11 17:57:01,437 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 371 - ##############################################################################
+2022-05-11 17:57:02,756 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 446 - ##############################################################################
+2022-05-11 17:57:02,756 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 447 - Positive Tweets :4Negative Tweets :1Neutral Tweets :295
+2022-05-11 17:57:02,756 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 448 - ##############################################################################
+2022-05-11 17:57:02,819 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 462 - ##############################################################################
+2022-05-11 17:57:02,819 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 463 - Tweets Polarity: Overall Positive
+2022-05-11 17:57:02,819 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 464 - ##############################################################################
+2022-05-11 17:57:02,824 - Fast API - INFO  - handlers.py - handlers: recommending: 481 - ##############################################################################
+2022-05-11 17:57:02,824 - Fast API - INFO  - handlers.py - handlers: recommending: 482 - According to the ML Predictions and Sentiment Analysis of Tweets, aRISEinTCS.NSstock is expected => BUY
+2022-05-11 17:57:02,825 - Fast API - INFO  - main.py - main: insertintostock: 141 - Forecasted Prices for Next 7 days:
+2022-05-11 17:57:02,825 - Fast API - INFO  - main.py - main: insertintostock: 142 - [[3689.66890767]
+ [3627.14173683]
+ [3660.72571883]
+ [3580.08420141]
+ [3592.55971384]
+ [3586.22205606]
+ [3559.52445946]]
+2022-05-11 18:13:41,661 - Fast API - INFO  - handlers.py - handlers: get_historical: 102 - TCS.NS
+2022-05-11 18:13:42,596 - Fast API - INFO  - handlers.py - handlers: get_historical: 105 -                    High          Low  ...     Volume    Adj Close
+Date                                  ...                        
+2020-05-11  1951.400024  1909.000000  ...  2449841.0  1893.067505
+2020-05-12  1956.500000  1910.250000  ...  3256595.0  1906.957764
+2020-05-13  1994.000000  1925.650024  ...  2656665.0  1907.104492
+2020-05-14  1923.099976  1891.099976  ...  2263146.0  1860.836426
+2020-05-15  1917.400024  1865.199951  ...  3173682.0  1851.592896
+...                 ...          ...  ...        ...          ...
+2022-05-05  3533.000000  3485.350098  ...  1612262.0  3513.399902
+2022-05-06  3474.500000  3424.500000  ...  2010812.0  3432.600098
+2022-05-09  3456.000000  3346.850098  ...  2481830.0  3445.100098
+2022-05-10  3464.800049  3422.000000  ...  1622685.0  3438.750000
+2022-05-11  3448.449951  3382.149902  ...  1841075.0  3412.000000
+
+[500 rows x 6 columns]
+2022-05-11 18:13:42,638 - Fast API - INFO  - main.py - main: insertintostock: 107 - ##############################################################################
+2022-05-11 18:13:42,638 - Fast API - INFO  - main.py - main: insertintostock: 108 - Today'sTCS.NSStock Data: 
+2022-05-11 18:13:42,638 - Fast API - INFO  - main.py - main: insertintostock: 110 -            Date         High          Low    Open   Close     Volume  Adj Close
+499  2022-05-11  3448.449951  3382.149902  3435.0  3412.0  1841075.0     3412.0
+2022-05-11 18:13:42,655 - Fast API - INFO  - main.py - main: insertintostock: 111 - ##############################################################################
+2022-05-11 18:14:24,229 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 174 - ##############################################################################
+2022-05-11 18:14:24,229 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 176 - Tomorrow's TCS.NS  Closing Price Prediction by ARIMA:3449.575864036043
+2022-05-11 18:14:24,230 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 179 - ARIMA RMSE:52.90841164691129
+2022-05-11 18:14:24,230 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 180 - ##############################################################################
+2022-05-11 18:14:44,834 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 306 - ##############################################################################
+2022-05-11 18:14:44,834 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 307 - Tomorrow's TCS.NS Closing Price Prediction by LSTM: 3430.028076171875
+2022-05-11 18:14:44,834 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 308 - LSTM RMSE:141.08640893117965
+2022-05-11 18:14:44,835 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 309 - ##############################################################################
+2022-05-11 18:14:44,995 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 368 - ##############################################################################
+2022-05-11 18:14:44,995 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 369 - Tomorrow's TCS.NS Closing Price Prediction by Linear Regression: 3689.6689076665825
+2022-05-11 18:14:44,995 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 370 - Linear Regression RMSE:207.55713004324141
+2022-05-11 18:14:44,995 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 371 - ##############################################################################
+2022-05-11 18:14:46,798 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 446 - ##############################################################################
+2022-05-11 18:14:46,798 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 447 - Positive Tweets :4Negative Tweets :1Neutral Tweets :295
+2022-05-11 18:14:46,798 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 448 - ##############################################################################
+2022-05-11 18:14:46,867 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 462 - ##############################################################################
+2022-05-11 18:14:46,867 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 463 - Tweets Polarity: Overall Positive
+2022-05-11 18:14:46,867 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 464 - ##############################################################################
+2022-05-11 18:14:46,875 - Fast API - INFO  - handlers.py - handlers: recommending: 481 - ##############################################################################
+2022-05-11 18:14:46,876 - Fast API - INFO  - handlers.py - handlers: recommending: 482 - According to the ML Predictions and Sentiment Analysis of Tweets, aRISEinTCS.NSstock is expected => BUY
+2022-05-11 18:14:46,877 - Fast API - INFO  - main.py - main: insertintostock: 141 - Forecasted Prices for Next 7 days:
+2022-05-11 18:14:46,877 - Fast API - INFO  - main.py - main: insertintostock: 142 - [[3689.66890767]
+ [3627.14173683]
+ [3660.72571883]
+ [3580.08420141]
+ [3592.55971384]
+ [3586.22205606]
+ [3559.52445946]]
+2022-05-11 18:35:44,916 - Fast API - INFO  - handlers.py - handlers: get_historical: 102 - TCS.NS
+2022-05-11 18:35:46,049 - Fast API - INFO  - handlers.py - handlers: get_historical: 105 -                    High          Low  ...     Volume    Adj Close
+Date                                  ...                        
+2020-05-11  1951.400024  1909.000000  ...  2449841.0  1893.067627
+2020-05-12  1956.500000  1910.250000  ...  3256595.0  1906.957642
+2020-05-13  1994.000000  1925.650024  ...  2656665.0  1907.104492
+2020-05-14  1923.099976  1891.099976  ...  2263146.0  1860.836670
+2020-05-15  1917.400024  1865.199951  ...  3173682.0  1851.592896
+...                 ...          ...  ...        ...          ...
+2022-05-05  3533.000000  3485.350098  ...  1612262.0  3513.399902
+2022-05-06  3474.500000  3424.500000  ...  2010812.0  3432.600098
+2022-05-09  3456.000000  3346.850098  ...  2481830.0  3445.100098
+2022-05-10  3464.800049  3422.000000  ...  1622685.0  3438.750000
+2022-05-11  3448.449951  3382.149902  ...  1841075.0  3412.000000
+
+[500 rows x 6 columns]
+2022-05-11 18:35:46,116 - Fast API - INFO  - main.py - main: insertintostock: 109 - ##############################################################################
+2022-05-11 18:35:46,116 - Fast API - INFO  - main.py - main: insertintostock: 110 - Today'sTCS.NSStock Data: 
+2022-05-11 18:35:46,116 - Fast API - INFO  - main.py - main: insertintostock: 112 -            Date         High          Low    Open   Close     Volume  Adj Close
+499  2022-05-11  3448.449951  3382.149902  3435.0  3412.0  1841075.0     3412.0
+2022-05-11 18:35:46,143 - Fast API - INFO  - main.py - main: insertintostock: 113 - ##############################################################################
+2022-05-11 18:36:23,855 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 174 - ##############################################################################
+2022-05-11 18:36:23,855 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 176 - Tomorrow's TCS.NS  Closing Price Prediction by ARIMA:3449.575864036043
+2022-05-11 18:36:23,855 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 179 - ARIMA RMSE:52.90841164691129
+2022-05-11 18:36:23,856 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 180 - ##############################################################################
+2022-05-11 18:36:43,836 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 306 - ##############################################################################
+2022-05-11 18:36:43,836 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 307 - Tomorrow's TCS.NS Closing Price Prediction by LSTM: 3509.63037109375
+2022-05-11 18:36:43,836 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 308 - LSTM RMSE:100.27364055746135
+2022-05-11 18:36:43,836 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 309 - ##############################################################################
+2022-05-11 18:36:43,982 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 368 - ##############################################################################
+2022-05-11 18:36:43,982 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 369 - Tomorrow's TCS.NS Closing Price Prediction by Linear Regression: 3689.6689076665825
+2022-05-11 18:36:43,982 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 370 - Linear Regression RMSE:207.55713004324141
+2022-05-11 18:36:43,983 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 371 - ##############################################################################
+2022-05-11 18:36:45,434 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 446 - ##############################################################################
+2022-05-11 18:36:45,434 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 447 - Positive Tweets :4Negative Tweets :1Neutral Tweets :295
+2022-05-11 18:36:45,435 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 448 - ##############################################################################
+2022-05-11 18:36:45,485 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 462 - ##############################################################################
+2022-05-11 18:36:45,485 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 463 - Tweets Polarity: Overall Positive
+2022-05-11 18:36:45,485 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 464 - ##############################################################################
+2022-05-11 18:36:45,492 - Fast API - INFO  - handlers.py - handlers: recommending: 481 - ##############################################################################
+2022-05-11 18:36:45,492 - Fast API - INFO  - handlers.py - handlers: recommending: 482 - According to the ML Predictions and Sentiment Analysis of Tweets, aRISEinTCS.NSstock is expected => BUY
+2022-05-11 18:36:45,493 - Fast API - INFO  - main.py - main: insertintostock: 143 - Forecasted Prices for Next 7 days:
+2022-05-11 18:36:45,493 - Fast API - INFO  - main.py - main: insertintostock: 144 - [[3689.66890767]
+ [3627.14173683]
+ [3660.72571883]
+ [3580.08420141]
+ [3592.55971384]
+ [3586.22205606]
+ [3559.52445946]]
+2022-05-11 18:42:04,874 - Fast API - INFO  - handlers.py - handlers: get_historical: 102 - TCS.NS
+2022-05-11 18:42:06,181 - Fast API - INFO  - handlers.py - handlers: get_historical: 105 -                    High          Low  ...     Volume    Adj Close
+Date                                  ...                        
+2020-05-11  1951.400024  1909.000000  ...  2449841.0  1893.067749
+2020-05-12  1956.500000  1910.250000  ...  3256595.0  1906.957886
+2020-05-13  1994.000000  1925.650024  ...  2656665.0  1907.104492
+2020-05-14  1923.099976  1891.099976  ...  2263146.0  1860.836792
+2020-05-15  1917.400024  1865.199951  ...  3173682.0  1851.593018
+...                 ...          ...  ...        ...          ...
+2022-05-05  3533.000000  3485.350098  ...  1612262.0  3513.399902
+2022-05-06  3474.500000  3424.500000  ...  2010812.0  3432.600098
+2022-05-09  3456.000000  3346.850098  ...  2481830.0  3445.100098
+2022-05-10  3464.800049  3422.000000  ...  1622685.0  3438.750000
+2022-05-11  3448.449951  3382.149902  ...  1841075.0  3412.000000
+
+[500 rows x 6 columns]
+2022-05-11 18:42:06,223 - Fast API - INFO  - main.py - main: insertintostock: 109 - ##############################################################################
+2022-05-11 18:42:06,223 - Fast API - INFO  - main.py - main: insertintostock: 110 - Today'sTCS.NSStock Data: 
+2022-05-11 18:42:06,223 - Fast API - INFO  - main.py - main: insertintostock: 112 -            Date         High          Low    Open   Close     Volume  Adj Close
+499  2022-05-11  3448.449951  3382.149902  3435.0  3412.0  1841075.0     3412.0
+2022-05-11 18:42:06,240 - Fast API - INFO  - main.py - main: insertintostock: 113 - ##############################################################################
+2022-05-11 18:42:41,492 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 174 - ##############################################################################
+2022-05-11 18:42:41,493 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 176 - Tomorrow's TCS.NS  Closing Price Prediction by ARIMA:3449.575864036043
+2022-05-11 18:42:41,493 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 179 - ARIMA RMSE:52.90841164691129
+2022-05-11 18:42:41,494 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 180 - ##############################################################################
+2022-05-11 18:43:06,767 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 306 - ##############################################################################
+2022-05-11 18:43:06,767 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 307 - Tomorrow's TCS.NS Closing Price Prediction by LSTM: 3476.615478515625
+2022-05-11 18:43:06,767 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 308 - LSTM RMSE:110.18914013234817
+2022-05-11 18:43:06,767 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 309 - ##############################################################################
+2022-05-11 18:43:06,878 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 368 - ##############################################################################
+2022-05-11 18:43:06,878 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 369 - Tomorrow's TCS.NS Closing Price Prediction by Linear Regression: 3689.6689076665825
+2022-05-11 18:43:06,878 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 370 - Linear Regression RMSE:207.55713004324141
+2022-05-11 18:43:06,878 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 371 - ##############################################################################
+2022-05-11 18:43:08,344 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 446 - ##############################################################################
+2022-05-11 18:43:08,344 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 447 - Positive Tweets :4Negative Tweets :1Neutral Tweets :295
+2022-05-11 18:43:08,345 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 448 - ##############################################################################
+2022-05-11 18:43:08,399 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 462 - ##############################################################################
+2022-05-11 18:43:08,399 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 463 - Tweets Polarity: Overall Positive
+2022-05-11 18:43:08,399 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 464 - ##############################################################################
+2022-05-11 18:43:08,405 - Fast API - INFO  - handlers.py - handlers: recommending: 481 - ##############################################################################
+2022-05-11 18:43:08,406 - Fast API - INFO  - handlers.py - handlers: recommending: 482 - According to the ML Predictions and Sentiment Analysis of Tweets, aRISEinTCS.NSstock is expected => BUY
+2022-05-11 18:43:08,406 - Fast API - INFO  - main.py - main: insertintostock: 143 - Forecasted Prices for Next 7 days:
+2022-05-11 18:43:08,406 - Fast API - INFO  - main.py - main: insertintostock: 144 - [[3689.66890767]
+ [3627.14173683]
+ [3660.72571883]
+ [3580.08420141]
+ [3592.55971384]
+ [3586.22205606]
+ [3559.52445946]]
+2022-05-11 18:52:40,083 - Fast API - INFO  - handlers.py - handlers: get_historical: 102 - TCS.NS
+2022-05-11 18:52:41,040 - Fast API - INFO  - handlers.py - handlers: get_historical: 105 -                    High          Low  ...     Volume    Adj Close
+Date                                  ...                        
+2020-05-11  1951.400024  1909.000000  ...  2449841.0  1893.067871
+2020-05-12  1956.500000  1910.250000  ...  3256595.0  1906.957886
+2020-05-13  1994.000000  1925.650024  ...  2656665.0  1907.104492
+2020-05-14  1923.099976  1891.099976  ...  2263146.0  1860.836548
+2020-05-15  1917.400024  1865.199951  ...  3173682.0  1851.593018
+...                 ...          ...  ...        ...          ...
+2022-05-05  3533.000000  3485.350098  ...  1612262.0  3513.399902
+2022-05-06  3474.500000  3424.500000  ...  2010812.0  3432.600098
+2022-05-09  3456.000000  3346.850098  ...  2481830.0  3445.100098
+2022-05-10  3464.800049  3422.000000  ...  1622685.0  3438.750000
+2022-05-11  3448.449951  3382.149902  ...  1841075.0  3412.000000
+
+[500 rows x 6 columns]
+2022-05-11 18:52:41,093 - Fast API - INFO  - main.py - main: insertintostock: 109 - ##############################################################################
+2022-05-11 18:52:41,094 - Fast API - INFO  - main.py - main: insertintostock: 110 - Today'sTCS.NSStock Data: 
+2022-05-11 18:52:41,094 - Fast API - INFO  - main.py - main: insertintostock: 112 -            Date         High          Low    Open   Close     Volume  Adj Close
+499  2022-05-11  3448.449951  3382.149902  3435.0  3412.0  1841075.0     3412.0
+2022-05-11 18:52:41,125 - Fast API - INFO  - main.py - main: insertintostock: 113 - ##############################################################################
+2022-05-11 18:53:17,102 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 174 - ##############################################################################
+2022-05-11 18:53:17,103 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 176 - Tomorrow's TCS.NS  Closing Price Prediction by ARIMA:3449.575864036043
+2022-05-11 18:53:17,103 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 179 - ARIMA RMSE:52.90841164691129
+2022-05-11 18:53:17,103 - Fast API - INFO  - handlers.py - handlers: ARIMA_ALGO: 180 - ##############################################################################
+2022-05-11 18:53:34,476 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 306 - ##############################################################################
+2022-05-11 18:53:34,476 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 307 - Tomorrow's TCS.NS Closing Price Prediction by LSTM: 3616.91748046875
+2022-05-11 18:53:34,476 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 308 - LSTM RMSE:141.50151492700482
+2022-05-11 18:53:34,476 - Fast API - INFO  - handlers.py - handlers: LSTM_ALGO: 309 - ##############################################################################
+2022-05-11 18:53:34,597 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 368 - ##############################################################################
+2022-05-11 18:53:34,598 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 369 - Tomorrow's TCS.NS Closing Price Prediction by Linear Regression: 3689.6689076665825
+2022-05-11 18:53:34,598 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 370 - Linear Regression RMSE:207.55713004324141
+2022-05-11 18:53:34,598 - Fast API - INFO  - handlers.py - handlers: LIN_REG_ALGO: 371 - ##############################################################################
+2022-05-11 18:53:35,944 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 446 - ##############################################################################
+2022-05-11 18:53:35,944 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 447 - Positive Tweets :4Negative Tweets :1Neutral Tweets :295
+2022-05-11 18:53:35,944 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 448 - ##############################################################################
+2022-05-11 18:53:35,999 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 462 - ##############################################################################
+2022-05-11 18:53:35,999 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 463 - Tweets Polarity: Overall Positive
+2022-05-11 18:53:35,999 - Fast API - INFO  - handlers.py - handlers: retrieving_tweets_polarity_stock: 464 - ##############################################################################
+2022-05-11 18:53:36,009 - Fast API - INFO  - handlers.py - handlers: recommending: 481 - ##############################################################################
+2022-05-11 18:53:36,010 - Fast API - INFO  - handlers.py - handlers: recommending: 482 - According to the ML Predictions and Sentiment Analysis of Tweets, aRISEinTCS.NSstock is expected => BUY
+2022-05-11 18:53:36,010 - Fast API - INFO  - main.py - main: insertintostock: 143 - Forecasted Prices for Next 7 days:
+2022-05-11 18:53:36,011 - Fast API - INFO  - main.py - main: insertintostock: 144 - [[3689.66890767]
+ [3627.14173683]
+ [3660.72571883]
+ [3580.08420141]
+ [3592.55971384]
+ [3586.22205606]
+ [3559.52445946]]
