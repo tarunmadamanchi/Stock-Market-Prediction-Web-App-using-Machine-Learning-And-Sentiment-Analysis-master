@@ -39,9 +39,9 @@ class Results:
     @staticmethod
     def contact_us_mail_sending(name,email,subject,contact_message):
         try:
-            sender_address = 'tarunmadamanchi@gmail.com'
-            sender_password = '1214228t'
-            receiver_address = 'tarun.madamanchi@knowledgelens.com'
+            sender_address = ''
+            sender_password = ''
+            receiver_address = ''
             recipient_name = 'Tarun Madamanchi'
             message = MIMEMultipart()
             from_header = "SF System"
