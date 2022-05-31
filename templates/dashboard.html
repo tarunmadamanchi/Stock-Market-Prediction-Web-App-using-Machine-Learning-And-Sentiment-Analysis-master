@@ -240,11 +240,12 @@ window.onload = function() {
 <!--{% endfor %}</div>-->
 <div >
  <table style="border:1px solid black;margin-left:auto;margin-right:auto;" >
-        <thead >
+        {% if row_data|length > 0 %}
+            <thead >
 
           <tr style="border:1px solid black;margin-left:auto;margin-right:auto;" >
             {% for col in column_names %}
-            <th style="text-align:center;">
+            <th style="text-align:left;">
 
               {{col}}
 
@@ -253,7 +254,7 @@ window.onload = function() {
           </tr>
 
         </thead>
-        <tbody >
+            <tbody >
           {% for row in row_data %}
           <tr >
             {% for col, row_ in zip(column_names, row) %}
@@ -264,6 +265,8 @@ window.onload = function() {
 
 
         </tbody>
+        {% endif %}
+
 
       </table>
     </div>

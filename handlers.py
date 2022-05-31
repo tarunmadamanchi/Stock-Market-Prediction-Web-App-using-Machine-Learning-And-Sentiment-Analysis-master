@@ -99,9 +99,9 @@ class Results:
         elif fields=='Country' and choose=='Stock':
             stock_full_form = Yahoo_Finance_Ticker_Symbols[Yahoo_Finance_Ticker_Symbols['Country'] == quote]
         elif fields=='Ticker' and choose=='Crypto':
-            stock_full_form = Yahoo_Finance_Ticker_Symbols[Yahoo_Finance_Ticker_Symbols['Ticker'] == quote]
+            stock_full_form = crypto[crypto['Ticker'] == quote]
         elif fields=='Name' and choose=='Crypto':
-            stock_full_form = Yahoo_Finance_Ticker_Symbols[Yahoo_Finance_Ticker_Symbols['Name'] == quote]
+            stock_full_form = crypto[crypto['Name'] == quote]
 
         return stock_full_form
 
@@ -388,6 +388,8 @@ class Results:
     #**************** SENTIMENT ANALYSIS **************************
     @staticmethod
     def retrieving_tweets_polarity_stock(symbol):
+        global country
+        final_currency = ['USD']
         Yahoo_Finance_Ticker_Symbols = pd.read_csv('Yahoo-Finance-Ticker-Symbols.csv')
         crypto = pd.read_csv('cryptocurrencies - cryptocurrencies.csv')
         dates = []
@@ -401,7 +403,6 @@ class Results:
                     dates.append(date)
             stock_full_form = crypto[crypto['Ticker'] == symbol]
             symbol = stock_full_form['Name'].to_list()[0][0:12]
-            country= stock_full_form['Country'].to_list()[0][0:12]
         else:
             for i in range(0, 10):
                 date = (datetime.today() + timedelta(days=i)).strftime("%Y-%m-%d")
@@ -415,10 +416,13 @@ class Results:
 
             symbol = stock_full_form['Name'].to_list()[0][0:12]
             country = stock_full_form['Country'].to_list()[0][0:12]
+            currency = CountryInfo(country)
+            final_currency = currency.currencies()
+            print("final_currency",final_currency)
 
 
-        currency=CountryInfo(country)
-        final_currency=currency.currencies()
+        # currency=CountryInfo(country)
+        # final_currency=currency.currencies()
         auth = tweepy.OAuthHandler(ct.consumer_key, ct.consumer_secret)
         auth.set_access_token(ct.access_token, ct.access_token_secret)
         user = tweepy.API(auth)
