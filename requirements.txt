@@ -13,6 +13,7 @@ scikit_learn==0.24.1
 statsmodels==0.12.2
 alpha_vantage==2.3.1
 pandas_datareader
+countryinfo
 https://pypi.anaconda.org/berber/simple/tweet-preprocessor/0.5.0/tweet-preprocessor-0.5.0.tar.gz
 
 
