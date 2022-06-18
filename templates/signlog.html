@@ -104,7 +104,7 @@
     
     
     alert("Account Created")
-    window.location.href = "http://127.0.0.1:5000/verifypl";
+    window.location.href = "/verifypl";
 
   })
   .catch((error) => {
@@ -147,7 +147,7 @@
                     .then((userCredential) => {
                         // Signed in 
                         const user = userCredential.user;
-                        window.location.href = "http://127.0.0.1:5000/home";
+                        window.location.href = "/home";
                         return false;
 
                         alert('User loged in!');
