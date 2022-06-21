@@ -73,13 +73,13 @@ onAuthStateChanged(auth, (user) => {
   } else {
       if(user== null){
       alert("Please login");
-          window.location.href = "http://127.0.0.1:5000/";
+          window.location.href = "/";
 
       }
       if(user!= null && user.emailVerified== false){
           console.log("trying");
           alert("Please Verify your email")
-          window.location.href = "http://127.0.0.1:5000/";
+          window.location.href = "/";
 
      }
 
